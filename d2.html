@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="NOURIVA - Home-cooked tiffin and meal subscription service.">
+    <meta name="keywords" content="tiffin, meal subscription, home cooked meals, food delivery">
+    <meta name="author" content="NOURIVA">
+
+    <!-- Page Title -->
+    <title>NOURIVA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Heading: DM Serif Display | Body: Manrope -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     NOURIVA CUSTOMER DASHBOARD
+========================================= -->
+
+    <div class="nouriva-dashboard-layout">
+
+
+        <!-- =========================================
+         FIXED SIDEBAR
+    ========================================== -->
+
+        <aside class="nouriva-dashboard-sidebar">
+
+            <!-- Mobile Sidebar Close -->
+
+            <button type="button" class="nouriva-dashboard-sidebar-close" id="dashboard-sidebar-close"
+                aria-label="Close dashboard menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="nouriva-dashboard-logo">
+
+                <img src="images/logo.png" alt="Nouriva">
+
+            </a>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="nouriva-dashboard-nav">
+
+                <span class="nouriva-dashboard-nav-label">
+                    CUSTOMER AREA
+                </span>
+
+
+                <!-- Dashboard -->
+
+                <a href="dashboard.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- Meal Plans -->
+
+                <a href="d2.html" class="nouriva-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <span>
+                        My Meal Plans
+                    </span>
+
+                </a>
+
+
+                <!-- Weekly Menu -->
+
+                <a href="d3.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Weekly Menu
+                    </span>
+
+                </a>
+
+
+                <!-- Subscription -->
+
+                <a href="d4.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    <span>
+                        Subscription
+                    </span>
+
+                </a>
+
+
+                <!-- Billing -->
+
+                <a href="d5.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>
+                        Billing &amp; Payments
+                    </span>
+
+                </a>
+
+
+                <!-- Delivery -->
+
+                <a href="d6.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <span>
+                        Delivery Details
+                    </span>
+
+                </a>
+
+
+                <!-- Settings -->
+
+                <a href="d7.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                    <span>
+                        Account Settings
+                    </span>
+
+                </a>
+
+                </nav>
+
+                <!-- Mobile Sidebar Profile -->
+
+                <div class="nouriva-dashboard-sidebar-mobile">
+
+                    <div class="nouriva-sidebar-quick-actions">
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Notifications">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="nouriva-sidebar-action-badge">
+                                3
+                            </span>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Notification
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Settings">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Settings
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="theme"
+                            aria-label="Toggle dark mode"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Dark Mode
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="rtl"
+                            aria-label="Toggle RTL"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-right-left"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                RTL Mode
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="nouriva-dashboard-sidebar-divider"></div>
+
+                    <div class="nouriva-dashboard-sidebar-profile">
+
+                        <div class="nouriva-dashboard-sidebar-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-sidebar-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="nouriva-dashboard-sidebar-bottom">
+
+                <a href="login.html" class="nouriva-dashboard-logout">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div class="nouriva-dashboard-sidebar-overlay" id="dashboard-sidebar-overlay">
+        </div>
+
+
+        <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+        <div class="nouriva-dashboard-main">
+
+
+            <!-- =====================================
+             TOP HEADER
+        ====================================== -->
+
+            <header class="nouriva-dashboard-header">
+
+                <!-- Mobile Menu Toggle -->
+
+                <button type="button" class="nouriva-dashboard-menu-toggle" id="dashboard-menu-toggle"
+                    aria-label="Open dashboard menu" aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+
+                <!-- Left -->
+
+                <div class="nouriva-dashboard-header-left">
+
+                    <span>
+                        CUSTOMER DASHBOARD
+                    </span>
+
+                    <h1>
+                        My Meal Plans
+                    </h1>
+
+                </div>
+
+
+                <!-- Right -->
+
+                <div class="nouriva-dashboard-header-right">
+
+
+                    <!-- Notification -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon nouriva-notification-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="nouriva-notification-badge">
+                            3
+                        </span>
+
+                    </button>
+
+                    <!-- Settings -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" aria-label="Settings">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </button>
+
+
+                    <!-- Dark Mode -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-theme-toggle"
+                        aria-label="Toggle dark mode">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-rtl-toggle"
+                        aria-label="Toggle RTL">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                    </button>
+
+
+                    <!-- Customer Profile -->
+
+                    <button type="button" class="nouriva-dashboard-profile">
+
+                        <div class="nouriva-dashboard-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <main class="nouriva-dashboard-content">
+
+
+                <!-- =================================================
+                 SECTION 01
+                 CURRENT PLAN CONTROL
+            ================================================== -->
+
+                <section class="meal-plan-control">
+
+
+                    <div class="meal-plan-control-heading">
+
+                        <div>
+
+                            <span>
+                                YOUR CURRENT PLAN
+                            </span>
+
+                            <h2>
+                                Balanced Plan
+                            </h2>
+
+                            <p>
+                                Your everyday meal plan is active and
+                                ready for the week ahead.
+                            </p>
+
+                        </div>
+
+
+                        <div class="meal-plan-live-status">
+
+                            <span></span>
+
+                            Active Plan
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="meal-plan-control-body">
+
+
+                        <!-- Plan Price -->
+
+                        <div class="meal-plan-price-block">
+
+                            <span>
+                                WEEKLY PLAN
+                            </span>
+
+                            <strong>
+                                ₹1,199
+                            </strong>
+
+                            <small>
+                                per week
+                            </small>
+
+                        </div>
+
+
+                        <!-- Plan Details -->
+
+                        <div class="meal-plan-detail-list">
+
+
+                            <div>
+
+                                <span>
+                                    MEALS PER WEEK
+                                </span>
+
+                                <strong>
+                                    7 Meals
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    MEAL STYLE
+                                </span>
+
+                                <strong>
+                                    Balanced
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    DIETARY CHOICE
+                                </span>
+
+                                <strong>
+                                    Vegetarian
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    NEXT RENEWAL
+                                </span>
+
+                                <strong>
+                                    24 Aug 2026
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Controls -->
+
+                        <div class="meal-plan-control-actions">
+
+                            <button type="button" class="meal-plan-edit-btn" id="open-plan-editor">
+
+                                <i class="fa-solid fa-sliders"></i>
+
+                                Modify Plan
+
+                            </button>
+
+
+                            <button type="button" class="meal-plan-secondary-btn">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                                View Schedule
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Progress -->
+
+                    <div class="meal-plan-progress-strip">
+
+                        <div>
+
+                            <span>
+                                THIS WEEK'S MEAL USAGE
+                            </span>
+
+                            <strong>
+                                5 of 7 meals selected
+                            </strong>
+
+                        </div>
+
+
+                        <div class="meal-plan-progress-track">
+
+                            <span></span>
+
+                        </div>
+
+
+                        <strong class="meal-plan-progress-value">
+                            71%
+                        </strong>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 02
+                 EXPLORE & COMPARE
+            ================================================== -->
+
+                <section class="meal-plan-explorer">
+
+
+                    <div class="meal-plan-explorer-heading">
+
+                        <div>
+
+                            <span>
+                                FIND YOUR FIT
+                            </span>
+
+                            <h2>
+                                Explore Other Plans
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Switch your meal style whenever your
+                            routine or preferences change.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="meal-plan-option-grid">
+
+
+                        <!-- Balanced -->
+
+                        <article class="meal-plan-option selected-plan">
+
+                            <div class="meal-plan-option-top">
+
+                                <span class="meal-plan-option-tag">
+                                    CURRENT
+                                </span>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+
+                            <div class="meal-plan-option-icon">
+
+                                <i class="fa-solid fa-leaf"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Balanced
+                            </h3>
+
+                            <p>
+                                Everyday meals designed to keep
+                                your week satisfying and balanced.
+                            </p>
+
+
+                            <div class="meal-plan-option-price">
+
+                                <strong>
+                                    ₹1,199
+                                </strong>
+
+                                <span>
+                                    / week
+                                </span>
+
+                            </div>
+
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    7 meals per week
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Mixed everyday menu
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Vegetarian friendly
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="meal-plan-current-btn">
+
+                                Current Plan
+
+                            </button>
+
+                        </article>
+
+
+
+                        <!-- High Protein -->
+
+                        <article class="meal-plan-option">
+
+                            <div class="meal-plan-option-top">
+
+                                <span>
+                                    PERFORMANCE
+                                </span>
+
+                                <i class="fa-solid fa-dumbbell"></i>
+
+                            </div>
+
+
+                            <div class="meal-plan-option-icon">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                            </div>
+
+
+                            <h3>
+                                High Protein
+                            </h3>
+
+                            <p>
+                                Protein-focused meals created for
+                                active and demanding routines.
+                            </p>
+
+
+                            <div class="meal-plan-option-price">
+
+                                <strong>
+                                    ₹1,399
+                                </strong>
+
+                                <span>
+                                    / week
+                                </span>
+
+                            </div>
+
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    7 meals per week
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Protein-rich recipes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Performance focused
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="meal-plan-select-btn">
+
+                                Choose This Plan
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </article>
+
+
+
+                        <!-- Light & Fresh -->
+
+                        <article class="meal-plan-option">
+
+                            <div class="meal-plan-option-top">
+
+                                <span>
+                                    LIGHT
+                                </span>
+
+                                <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                            </div>
+
+
+                            <div class="meal-plan-option-icon">
+
+                                <i class="fa-solid fa-seedling"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Light &amp; Fresh
+                            </h3>
+
+                            <p>
+                                Lighter portions and fresh combinations
+                                for a simpler weekly routine.
+                            </p>
+
+
+                            <div class="meal-plan-option-price">
+
+                                <strong>
+                                    ₹999
+                                </strong>
+
+                                <span>
+                                    / week
+                                </span>
+
+                            </div>
+
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    5 meals per week
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Fresh seasonal meals
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Lighter meal options
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="meal-plan-select-btn">
+
+                                Choose This Plan
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 03
+                 CUSTOMIZE
+            ================================================== -->
+
+                <section class="meal-preference-studio">
+
+
+                    <div class="meal-preference-intro">
+
+                        <span>
+                            PERSONALIZE YOUR PLAN
+                        </span>
+
+                        <h2>
+                            Build Meals Around You
+                        </h2>
+
+                        <p>
+                            Adjust your preferences and create a
+                            meal experience that fits your routine.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="meal-preference-layout">
+
+
+                        <!-- Preference Controls -->
+
+                        <div class="meal-preference-controls">
+
+
+                            <!-- Cuisine -->
+
+                            <div class="meal-preference-group">
+
+                                <div class="meal-preference-group-head">
+
+                                    <div>
+
+                                        <span>
+                                            01
+                                        </span>
+
+                                        <h3>
+                                            Cuisine Style
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-utensils"></i>
+
+                                </div>
+
+
+                                <div class="meal-choice-row">
+
+                                    <button type="button" class="meal-choice active" data-choice="South Indian">
+
+                                        South Indian
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice" data-choice="North Indian">
+
+                                        North Indian
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice" data-choice="Mixed">
+
+                                        Mixed
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Dietary -->
+
+                            <div class="meal-preference-group">
+
+                                <div class="meal-preference-group-head">
+
+                                    <div>
+
+                                        <span>
+                                            02
+                                        </span>
+
+                                        <h3>
+                                            Dietary Preference
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-leaf"></i>
+
+                                </div>
+
+
+                                <div class="meal-choice-row">
+
+                                    <button type="button" class="meal-choice active" data-choice="Vegetarian">
+
+                                        Vegetarian
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice" data-choice="Vegan">
+
+                                        Vegan
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice" data-choice="Eggetarian">
+
+                                        Eggetarian
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Portion -->
+
+                            <div class="meal-preference-group">
+
+                                <div class="meal-preference-group-head">
+
+                                    <div>
+
+                                        <span>
+                                            03
+                                        </span>
+
+                                        <h3>
+                                            Meal Quantity
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-bowl-food"></i>
+
+                                </div>
+
+
+                                <div class="meal-choice-row">
+
+                                    <button type="button" class="meal-choice" data-choice="5 Meals">
+
+                                        5 Meals
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice active" data-choice="7 Meals">
+
+                                        7 Meals
+
+                                    </button>
+
+
+                                    <button type="button" class="meal-choice" data-choice="10 Meals">
+
+                                        10 Meals
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Live Preview -->
+
+                        <div class="meal-plan-live-preview">
+
+
+                            <div class="meal-preview-top">
+
+                                <span>
+                                    LIVE PLAN PREVIEW
+                                </span>
+
+                                <div>
+                                    <span></span>
+                                    Updating
+                                </div>
+
+                            </div>
+
+
+                            <div class="meal-preview-main">
+
+                                <div class="meal-preview-symbol">
+
+                                    <i class="fa-solid fa-bowl-rice"></i>
+
+                                </div>
+
+
+                                <span>
+                                    YOUR PERSONALIZED PLAN
+                                </span>
+
+                                <h3>
+                                    Balanced Plan
+                                </h3>
+
+                                <p>
+                                    Your selected preferences will
+                                    shape your upcoming meal choices.
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-preview-summary">
+
+
+                                <div>
+
+                                    <span>
+                                        CUISINE
+                                    </span>
+
+                                    <strong id="preview-cuisine">
+                                        South Indian
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        DIET
+                                    </span>
+
+                                    <strong id="preview-diet">
+                                        Vegetarian
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        MEALS
+                                    </span>
+
+                                    <strong id="preview-meals">
+                                        7 / Week
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <button type="button" class="meal-save-preferences" id="save-meal-preferences">
+
+                                Save Preferences
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 04
+                 WEEKLY SCHEDULE
+            ================================================== -->
+
+                <section class="meal-week-planner">
+
+
+                    <div class="meal-week-planner-heading">
+
+                        <div>
+
+                            <span>
+                                YOUR PLAN SCHEDULE
+                            </span>
+
+                            <h2>
+                                This Week's Meals
+                            </h2>
+
+                        </div>
+
+
+                        <div class="meal-week-planner-info">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            Changes close Sunday at 6 PM
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="meal-schedule-list">
+
+
+                        <!-- Monday -->
+
+                        <div class="meal-schedule-item">
+
+                            <div class="meal-schedule-day">
+
+                                <span>
+                                    MON
+                                </span>
+
+                                <strong>
+                                    18
+                                </strong>
+
+                            </div>
+
+
+                            <div class="meal-schedule-image">
+
+                                <img src="images/meal-menu-1.jpg" alt="Monday meal">
+
+                            </div>
+
+
+                            <div class="meal-schedule-info">
+
+                                <span>
+                                    LUNCH
+                                </span>
+
+                                <h3>
+                                    Comfort Bowl
+                                </h3>
+
+                                <p>
+                                    Rice · Sambar · Vegetable Poriyal · Curd
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-schedule-status completed">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Selected
+
+                            </div>
+
+
+                            <button type="button" class="meal-schedule-change">
+
+                                Change
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- Tuesday -->
+
+                        <div class="meal-schedule-item">
+
+                            <div class="meal-schedule-day">
+
+                                <span>
+                                    TUE
+                                </span>
+
+                                <strong>
+                                    19
+                                </strong>
+
+                            </div>
+
+
+                            <div class="meal-schedule-image">
+
+                                <img src="images/meal-menu-2.jpg" alt="Tuesday meal">
+
+                            </div>
+
+
+                            <div class="meal-schedule-info">
+
+                                <span>
+                                    LUNCH
+                                </span>
+
+                                <h3>
+                                    Homestyle Thali
+                                </h3>
+
+                                <p>
+                                    Chapati · Dal · Vegetable Curry · Salad
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-schedule-status completed">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                Selected
+
+                            </div>
+
+
+                            <button type="button" class="meal-schedule-change">
+
+                                Change
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- Wednesday -->
+
+                        <div class="meal-schedule-item">
+
+                            <div class="meal-schedule-day">
+
+                                <span>
+                                    WED
+                                </span>
+
+                                <strong>
+                                    20
+                                </strong>
+
+                            </div>
+
+
+                            <div class="meal-schedule-image">
+
+                                <img src="images/meal-menu-3.jpg" alt="Wednesday meal">
+
+                            </div>
+
+
+                            <div class="meal-schedule-info">
+
+                                <span>
+                                    LUNCH
+                                </span>
+
+                                <h3>
+                                    Protein Plate
+                                </h3>
+
+                                <p>
+                                    Rice · Paneer · Dal · Mixed Vegetables
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-schedule-status upcoming">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                Upcoming
+
+                            </div>
+
+
+                            <button type="button" class="meal-schedule-change">
+
+                                Change
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- Thursday -->
+
+                        <div class="meal-schedule-item">
+
+                            <div class="meal-schedule-day">
+
+                                <span>
+                                    THU
+                                </span>
+
+                                <strong>
+                                    21
+                                </strong>
+
+                            </div>
+
+
+                            <div class="meal-schedule-image">
+
+                                <img src="images/meal-menu-4.jpg" alt="Thursday meal">
+
+                            </div>
+
+
+                            <div class="meal-schedule-info">
+
+                                <span>
+                                    LUNCH
+                                </span>
+
+                                <h3>
+                                    Lemon Rice Bowl
+                                </h3>
+
+                                <p>
+                                    Lemon Rice · Kootu · Fresh Curd
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-schedule-status upcoming">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                Upcoming
+
+                            </div>
+
+
+                            <button type="button" class="meal-schedule-change">
+
+                                Change
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- Friday -->
+
+                        <div class="meal-schedule-item">
+
+                            <div class="meal-schedule-day">
+
+                                <span>
+                                    FRI
+                                </span>
+
+                                <strong>
+                                    22
+                                </strong>
+
+                            </div>
+
+
+                            <div class="meal-schedule-image">
+
+                                <img src="images/meal-menu-5.jpg" alt="Friday meal">
+
+                            </div>
+
+
+                            <div class="meal-schedule-info">
+
+                                <span>
+                                    LUNCH
+                                </span>
+
+                                <h3>
+                                    Friday Special
+                                </h3>
+
+                                <p>
+                                    Chef's Special · Poriyal · Rasam · Dessert
+                                </p>
+
+                            </div>
+
+
+                            <div class="meal-schedule-status upcoming">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                                Upcoming
+
+                            </div>
+
+
+                            <button type="button" class="meal-schedule-change">
+
+                                Change
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="meal-schedule-footer">
+
+                        <span>
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            Meal changes are applied to your upcoming
+                            delivery cycle.
+                        </span>
+
+
+                        <button type="button" id="save-week-plan">
+
+                            Save Weekly Plan
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main JS -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

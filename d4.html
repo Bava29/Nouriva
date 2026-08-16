@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="NOURIVA - Home-cooked tiffin and meal subscription service.">
+    <meta name="keywords" content="tiffin, meal subscription, home cooked meals, food delivery">
+    <meta name="author" content="NOURIVA">
+
+    <!-- Page Title -->
+    <title>NOURIVA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Heading: DM Serif Display | Body: Manrope -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     NOURIVA CUSTOMER DASHBOARD
+========================================= -->
+
+    <div class="nouriva-dashboard-layout">
+
+
+        <!-- =========================================
+         FIXED SIDEBAR
+    ========================================== -->
+
+        <aside class="nouriva-dashboard-sidebar">
+
+            <!-- Mobile Sidebar Close -->
+
+            <button type="button" class="nouriva-dashboard-sidebar-close" id="dashboard-sidebar-close"
+                aria-label="Close dashboard menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="nouriva-dashboard-logo">
+
+                <img src="images/logo.png" alt="Nouriva">
+
+            </a>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="nouriva-dashboard-nav">
+
+                <span class="nouriva-dashboard-nav-label">
+                    CUSTOMER AREA
+                </span>
+
+
+                <!-- Dashboard -->
+
+                <a href="dashboard.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- Meal Plans -->
+
+                <a href="d2.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <span>
+                        My Meal Plans
+                    </span>
+
+                </a>
+
+
+                <!-- Weekly Menu -->
+
+                <a href="d3.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Weekly Menu
+                    </span>
+
+                </a>
+
+
+                <!-- Subscription -->
+
+                <a href="d4.html" class="nouriva-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    <span>
+                        Subscription
+                    </span>
+
+                </a>
+
+
+                <!-- Billing -->
+
+                <a href="d5.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>
+                        Billing &amp; Payments
+                    </span>
+
+                </a>
+
+
+                <!-- Delivery -->
+
+                <a href="d6.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <span>
+                        Delivery Details
+                    </span>
+
+                </a>
+
+
+                <!-- Settings -->
+
+                <a href="d7.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                    <span>
+                        Account Settings
+                    </span>
+
+                </a>
+
+                </nav>
+
+                <!-- Mobile Sidebar Profile -->
+
+                <div class="nouriva-dashboard-sidebar-mobile">
+
+                    <div class="nouriva-sidebar-quick-actions">
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Notifications">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="nouriva-sidebar-action-badge">
+                                3
+                            </span>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Notification
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Settings">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Settings
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="theme"
+                            aria-label="Toggle dark mode"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Dark Mode
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="rtl"
+                            aria-label="Toggle RTL"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-right-left"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                RTL Mode
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="nouriva-dashboard-sidebar-divider"></div>
+
+                    <div class="nouriva-dashboard-sidebar-profile">
+
+                        <div class="nouriva-dashboard-sidebar-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-sidebar-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="nouriva-dashboard-sidebar-bottom">
+
+                <a href="login.html" class="nouriva-dashboard-logout">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div class="nouriva-dashboard-sidebar-overlay" id="dashboard-sidebar-overlay">
+        </div>
+
+
+        <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+        <div class="nouriva-dashboard-main">
+
+
+            <!-- =====================================
+             TOP HEADER
+        ====================================== -->
+
+            <header class="nouriva-dashboard-header">
+
+                <!-- Mobile Menu Toggle -->
+
+                <button type="button" class="nouriva-dashboard-menu-toggle" id="dashboard-menu-toggle"
+                    aria-label="Open dashboard menu" aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <!-- Left -->
+
+                <div class="nouriva-dashboard-header-left">
+
+                    <span>
+                        CUSTOMER DASHBOARD
+                    </span>
+
+                    <h1>
+                        Subscription Plans
+                    </h1>
+
+                </div>
+
+
+                <!-- Right -->
+
+                <div class="nouriva-dashboard-header-right">
+
+
+                    <!-- Notification -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon nouriva-notification-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="nouriva-notification-badge">
+                            3
+                        </span>
+
+                    </button>
+
+                    <!-- Settings -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" aria-label="Settings">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </button>
+
+
+                    <!-- Dark Mode -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-theme-toggle"
+                        aria-label="Toggle dark mode">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-rtl-toggle"
+                        aria-label="Toggle RTL">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                    </button>
+
+
+                    <!-- Customer Profile -->
+
+                    <button type="button" class="nouriva-dashboard-profile">
+
+                        <div class="nouriva-dashboard-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <main class="nouriva-dashboard-content">
+
+
+                <!-- =================================================
+                 SECTION 01
+                 CURRENT SUBSCRIPTION
+            ================================================== -->
+
+                <section class="subscription-current-section">
+
+
+                    <div class="subscription-current-heading">
+
+                        <div>
+
+                            <span>
+                                YOUR CURRENT SUBSCRIPTION
+                            </span>
+
+                            <h2>
+                                Balanced Plan
+                            </h2>
+
+                            <p>
+                                Your subscription is active and your
+                                next meal cycle is already scheduled.
+                            </p>
+
+                        </div>
+
+
+                        <div class="subscription-status">
+
+                            <span></span>
+
+                            Active
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="subscription-current-grid">
+
+
+                        <!-- Plan -->
+
+                        <div class="subscription-current-plan">
+
+                            <div class="subscription-plan-icon">
+
+                                <i class="fa-solid fa-leaf"></i>
+
+                            </div>
+
+
+                            <span>
+                                CURRENT PLAN
+                            </span>
+
+                            <h3>
+                                Balanced
+                            </h3>
+
+                            <p>
+                                Everyday meals designed around
+                                balanced nutrition and variety.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- Price -->
+
+                        <div class="subscription-current-price">
+
+                            <span>
+                                CURRENT BILLING
+                            </span>
+
+                            <strong>
+                                ₹1,199
+                            </strong>
+
+                            <small>
+                                per week
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- Renewal -->
+
+                        <div class="subscription-renewal">
+
+                            <span>
+                                NEXT RENEWAL
+                            </span>
+
+                            <strong>
+                                24 Aug 2026
+                            </strong>
+
+                            <small>
+                                10 days remaining
+                            </small>
+
+                        </div>
+
+
+
+                        <!-- Meals -->
+
+                        <div class="subscription-meals">
+
+                            <span>
+                                MEAL ALLOCATION
+                            </span>
+
+                            <strong>
+                                7 Meals
+                            </strong>
+
+                            <small>
+                                per billing cycle
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="subscription-current-footer">
+
+                        <div>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <span>
+                                Your subscription renews automatically.
+                            </span>
+
+                        </div>
+
+
+                        <button type="button" id="manage-subscription">
+
+                            Manage Subscription
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 02
+                 SUBSCRIPTION PLANS
+            ================================================== -->
+
+                <section class="subscription-plans-section">
+
+
+                    <div class="subscription-plans-heading">
+
+                        <div>
+
+                            <span>
+                                CHOOSE YOUR RHYTHM
+                            </span>
+
+                            <h2>
+                                Find the right subscription
+                            </h2>
+
+                        </div>
+
+
+                        <p>
+                            Choose a billing cycle that fits your
+                            routine and enjoy uninterrupted meals.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="subscription-plan-grid">
+
+
+                        <!-- WEEKLY -->
+
+                        <article class="subscription-plan-card selected">
+
+
+                            <div class="subscription-plan-card-top">
+
+                                <span>
+                                    FLEXIBLE
+                                </span>
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+
+                            <div class="subscription-card-icon">
+
+                                <i class="fa-regular fa-calendar"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Weekly
+                            </h3>
+
+
+                            <p>
+                                Stay flexible with a simple
+                                week-to-week commitment.
+                            </p>
+
+
+                            <div class="subscription-card-price">
+
+                                <strong>
+                                    ₹1,199
+                                </strong>
+
+                                <span>
+                                    / week
+                                </span>
+
+                            </div>
+
+                            <div class="subscription-savings">
+
+                                Saved ₹230
+
+                            </div>
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    7 meals every week
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Flexible meal changes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    No long-term commitment
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Automatic renewal
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="subscription-plan-button current-plan-button">
+
+                                Current Plan
+
+                            </button>
+
+                        </article>
+
+
+
+                        <!-- MONTHLY -->
+
+                        <article class="subscription-plan-card recommended">
+
+
+                            <div class="subscription-recommended-badge">
+
+                                BEST VALUE
+
+                            </div>
+
+
+                            <div class="subscription-plan-card-top">
+
+                                <span>
+                                    POPULAR
+                                </span>
+
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+
+
+                            <div class="subscription-card-icon">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Monthly
+                            </h3>
+
+
+                            <p>
+                                A better-value rhythm for customers
+                                who want consistency every month.
+                            </p>
+
+
+                            <div class="subscription-card-price">
+
+                                <strong>
+                                    ₹4,299
+                                </strong>
+
+                                <span>
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <div class="subscription-savings">
+
+                                Save ₹497
+
+                            </div>
+
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    28 meals per month
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Priority meal selection
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Flexible meal changes
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Automatic renewal
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="subscription-plan-button select-plan-button"
+                                data-plan="Monthly">
+
+                                Switch to Monthly
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </article>
+
+
+
+                        <!-- QUARTERLY -->
+
+                        <article class="subscription-plan-card">
+
+
+                            <div class="subscription-plan-card-top">
+
+                                <span>
+                                    LONG TERM
+                                </span>
+
+                                <i class="fa-solid fa-gem"></i>
+
+                            </div>
+
+
+                            <div class="subscription-card-icon">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                            </div>
+
+
+                            <h3>
+                                Quarterly
+                            </h3>
+
+
+                            <p>
+                                Lock in your routine and get the
+                                strongest long-term value.
+                            </p>
+
+
+                            <div class="subscription-card-price">
+
+                                <strong>
+                                    ₹11,999
+                                </strong>
+
+                                <span>
+                                    / 3 months
+                                </span>
+
+                            </div>
+
+
+                            <div class="subscription-savings">
+
+                                Save ₹1,598
+
+                            </div>
+
+
+                            <ul>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    84 meals per quarter
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Priority meal selection
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Premium meal flexibility
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-check"></i>
+                                    Automatic renewal
+                                </li>
+
+                            </ul>
+
+
+                            <button type="button" class="subscription-plan-button select-plan-button"
+                                data-plan="Quarterly">
+
+                                Switch to Quarterly
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 03
+                 CUSTOMIZE SUBSCRIPTION
+            ================================================== -->
+
+                <section class="subscription-customize-section">
+
+
+                    <div class="subscription-customize-heading">
+
+                        <div>
+
+                            <span>
+                                PERSONALIZE YOUR SUBSCRIPTION
+                            </span>
+
+                            <h2>
+                                Build your ideal rhythm
+                            </h2>
+
+                        </div>
+
+                        <p>
+                            Adjust your billing, meal quantity and
+                            delivery preferences before saving.
+                        </p>
+
+                    </div>
+
+
+
+                    <div class="subscription-customize-layout">
+
+
+                        <!-- Controls -->
+
+                        <div class="subscription-custom-controls">
+
+
+                            <!-- Billing Cycle -->
+
+                            <div class="subscription-control-group">
+
+                                <div class="subscription-control-title">
+
+                                    <div>
+
+                                        <span>
+                                            01
+                                        </span>
+
+                                        <h3>
+                                            Billing Cycle
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-repeat"></i>
+
+                                </div>
+
+
+                                <div class="subscription-choice-row">
+
+                                    <button type="button" class="subscription-choice active" data-cycle="Weekly">
+
+                                        Weekly
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice" data-cycle="Monthly">
+
+                                        Monthly
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice" data-cycle="Quarterly">
+
+                                        Quarterly
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Meals -->
+
+                            <div class="subscription-control-group">
+
+                                <div class="subscription-control-title">
+
+                                    <div>
+
+                                        <span>
+                                            02
+                                        </span>
+
+                                        <h3>
+                                            Meal Allocation
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-bowl-food"></i>
+
+                                </div>
+
+
+                                <div class="subscription-choice-row">
+
+                                    <button type="button" class="subscription-choice" data-meals="5 Meals">
+
+                                        5 Meals
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice active" data-meals="7 Meals">
+
+                                        7 Meals
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice" data-meals="10 Meals">
+
+                                        10 Meals
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- Delivery -->
+
+                            <div class="subscription-control-group">
+
+                                <div class="subscription-control-title">
+
+                                    <div>
+
+                                        <span>
+                                            03
+                                        </span>
+
+                                        <h3>
+                                            Delivery Frequency
+                                        </h3>
+
+                                    </div>
+
+                                    <i class="fa-solid fa-truck"></i>
+
+                                </div>
+
+
+                                <div class="subscription-choice-row">
+
+                                    <button type="button" class="subscription-choice active" data-delivery="Every Day">
+
+                                        Every Day
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice" data-delivery="Weekdays">
+
+                                        Weekdays
+
+                                    </button>
+
+
+                                    <button type="button" class="subscription-choice" data-delivery="Custom">
+
+                                        Custom
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Live Summary -->
+
+                        <div class="subscription-live-summary">
+
+
+                            <div class="subscription-summary-top">
+
+                                <span>
+                                    LIVE SUBSCRIPTION SUMMARY
+                                </span>
+
+                                <div>
+
+                                    <span></span>
+
+                                    Updating
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="subscription-summary-main">
+
+                                <div class="subscription-summary-icon">
+
+                                    <i class="fa-solid fa-leaf"></i>
+
+                                </div>
+
+                                <span>
+                                    YOUR PLAN
+                                </span>
+
+                                <h3>
+                                    Balanced Plan
+                                </h3>
+
+                                <p>
+                                    A flexible subscription built around
+                                    your current meal preferences.
+                                </p>
+
+                            </div>
+
+
+                            <div class="subscription-summary-details">
+
+
+                                <div>
+
+                                    <span>
+                                        BILLING
+                                    </span>
+
+                                    <strong id="summary-cycle">
+                                        Weekly
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        MEALS
+                                    </span>
+
+                                    <strong id="summary-meals">
+                                        7 Meals
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        DELIVERY
+                                    </span>
+
+                                    <strong id="summary-delivery">
+                                        Every Day
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="subscription-summary-price">
+
+                                <span>
+                                    ESTIMATED BILLING
+                                </span>
+
+                                <strong id="summary-price">
+                                    ₹1,199
+                                </strong>
+
+                                <small id="summary-period">
+                                    per week
+                                </small>
+
+                            </div>
+
+
+                            <button type="button" id="save-subscription-settings">
+
+                                Confirm Changes
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 04
+                 ACTIVITY & CONTROLS
+            ================================================== -->
+
+                <section class="subscription-activity-section">
+
+
+                    <div class="subscription-activity-heading">
+
+                        <div>
+
+                            <span>
+                                SUBSCRIPTION ACTIVITY
+                            </span>
+
+                            <h2>
+                                Stay in control
+                            </h2>
+
+                        </div>
+
+                        <div class="subscription-renewal-pill">
+
+                            <i class="fa-solid fa-rotate"></i>
+
+                            Auto-renewal ON
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="subscription-activity-layout">
+
+
+                        <!-- Timeline -->
+
+                        <div class="subscription-timeline">
+
+
+                            <div class="subscription-timeline-item completed">
+
+                                <div class="subscription-timeline-dot">
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        18 AUG 2026
+                                    </span>
+
+                                    <h3>
+                                        Subscription Started
+                                    </h3>
+
+                                    <p>
+                                        Your Balanced Plan became active.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="subscription-timeline-item completed">
+
+                                <div class="subscription-timeline-dot">
+
+                                    <i class="fa-solid fa-check"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        18 AUG 2026
+                                    </span>
+
+                                    <h3>
+                                        Payment Successful
+                                    </h3>
+
+                                    <p>
+                                        Your weekly subscription payment
+                                        was processed successfully.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="subscription-timeline-item current">
+
+                                <div class="subscription-timeline-dot">
+
+                                    <i class="fa-solid fa-circle"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        CURRENT CYCLE
+                                    </span>
+
+                                    <h3>
+                                        Meals in Progress
+                                    </h3>
+
+                                    <p>
+                                        Your current weekly meal cycle
+                                        is active.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="subscription-timeline-item upcoming">
+
+                                <div class="subscription-timeline-dot">
+
+                                    <i class="fa-regular fa-calendar"></i>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        24 AUG 2026
+                                    </span>
+
+                                    <h3>
+                                        Next Renewal
+                                    </h3>
+
+                                    <p>
+                                        Your subscription will renew
+                                        automatically.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Controls -->
+
+                        <div class="subscription-management-card">
+
+
+                            <div class="subscription-management-top">
+
+                                <div>
+
+                                    <span>
+                                        SUBSCRIPTION CONTROLS
+                                    </span>
+
+                                    <h3>
+                                        Manage your plan
+                                    </h3>
+
+                                </div>
+
+                                <i class="fa-solid fa-sliders"></i>
+
+                            </div>
+
+
+                            <!-- Auto Renewal -->
+
+                            <div class="subscription-toggle-row">
+
+                                <div>
+
+                                    <strong>
+                                        Auto-renewal
+                                    </strong>
+
+                                    <span>
+                                        Continue your plan automatically
+                                    </span>
+
+                                </div>
+
+
+                                <label class="subscription-switch">
+
+                                    <input type="checkbox" id="auto-renewal-toggle" checked>
+
+                                    <span></span>
+
+                                </label>
+
+                            </div>
+
+
+                            <!-- Payment -->
+
+                            <div class="subscription-management-item">
+
+                                <div>
+
+                                    <i class="fa-regular fa-credit-card"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        PAYMENT METHOD
+                                    </span>
+
+                                    <strong>
+                                        Visa ending 4821
+                                    </strong>
+
+                                </div>
+
+                                <button type="button">
+
+                                    Change
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- Pause -->
+
+                            <button type="button" class="subscription-pause-button" id="pause-subscription">
+
+                                <i class="fa-regular fa-circle-pause"></i>
+
+                                Pause Subscription
+
+                            </button>
+
+
+                            <!-- Cancel -->
+
+                            <button type="button" class="subscription-cancel-button" id="cancel-subscription">
+
+                                Cancel Subscription
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subscription-footer-note">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <span>
+                            Changes to your subscription will apply to
+                            the next eligible billing cycle.
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main JS -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

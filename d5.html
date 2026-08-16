@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="NOURIVA - Home-cooked tiffin and meal subscription service.">
+    <meta name="keywords" content="tiffin, meal subscription, home cooked meals, food delivery">
+    <meta name="author" content="NOURIVA">
+
+    <!-- Page Title -->
+    <title>NOURIVA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Heading: DM Serif Display | Body: Manrope -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     NOURIVA CUSTOMER DASHBOARD
+========================================= -->
+
+    <div class="nouriva-dashboard-layout">
+
+
+        <!-- =========================================
+         FIXED SIDEBAR
+    ========================================== -->
+
+        <aside class="nouriva-dashboard-sidebar">
+
+
+            <!-- Mobile Sidebar Close -->
+
+            <button type="button" class="nouriva-dashboard-sidebar-close" id="dashboard-sidebar-close"
+                aria-label="Close dashboard menu">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <!-- Logo -->
+
+            <a href="index.html" class="nouriva-dashboard-logo">
+
+                <img src="images/logo.png" alt="Nouriva">
+
+            </a>
+
+
+            <!-- Sidebar Navigation -->
+
+            <nav class="nouriva-dashboard-nav">
+
+                <span class="nouriva-dashboard-nav-label">
+                    CUSTOMER AREA
+                </span>
+
+
+                <!-- Dashboard -->
+
+                <a href="dashboard.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- Meal Plans -->
+
+                <a href="d2.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    <span>
+                        My Meal Plans
+                    </span>
+
+                </a>
+
+
+                <!-- Weekly Menu -->
+
+                <a href="d3.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <span>
+                        Weekly Menu
+                    </span>
+
+                </a>
+
+
+                <!-- Subscription -->
+
+                <a href="d4.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-repeat"></i>
+
+                    <span>
+                        Subscription
+                    </span>
+
+                </a>
+
+
+                <!-- Billing -->
+
+                <a href="d5.html" class="nouriva-dashboard-nav-link active">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>
+                        Billing &amp; Payments
+                    </span>
+
+                </a>
+
+
+                <!-- Delivery -->
+
+                <a href="d6.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <span>
+                        Delivery Details
+                    </span>
+
+                </a>
+
+
+                <!-- Settings -->
+
+                <a href="d7.html" class="nouriva-dashboard-nav-link">
+
+                    <i class="fa-solid fa-user-gear"></i>
+
+                    <span>
+                        Account Settings
+                    </span>
+
+                </a>
+
+                </nav>
+
+                <!-- Mobile Sidebar Profile -->
+
+                <div class="nouriva-dashboard-sidebar-mobile">
+
+                    <div class="nouriva-sidebar-quick-actions">
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Notifications">
+
+                            <i class="fa-regular fa-bell"></i>
+
+                            <span class="nouriva-sidebar-action-badge">
+                                3
+                            </span>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Notification
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            aria-label="Settings">
+
+                            <i class="fa-solid fa-gear"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Settings
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="theme"
+                            aria-label="Toggle dark mode"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-moon"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                Dark Mode
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="nouriva-sidebar-quick-action"
+                            data-dashboard-action="rtl"
+                            aria-label="Toggle RTL"
+                            aria-pressed="false">
+
+                            <i class="fa-solid fa-right-left"></i>
+
+                            <span class="nouriva-sidebar-quick-action-label">
+                                RTL Mode
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="nouriva-dashboard-sidebar-divider"></div>
+
+                    <div class="nouriva-dashboard-sidebar-profile">
+
+                        <div class="nouriva-dashboard-sidebar-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-sidebar-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="nouriva-dashboard-sidebar-bottom">
+
+                <a href="login.html" class="nouriva-dashboard-logout">
+
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                    <span>
+                        Logout
+                    </span>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+        <div class="nouriva-dashboard-sidebar-overlay" id="dashboard-sidebar-overlay">
+        </div>
+
+        <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+        <div class="nouriva-dashboard-main">
+
+
+            <!-- =====================================
+             TOP HEADER
+        ====================================== -->
+
+            <header class="nouriva-dashboard-header">
+
+
+                <!-- Mobile Menu Toggle -->
+
+                <button type="button" class="nouriva-dashboard-menu-toggle" id="dashboard-menu-toggle"
+                    aria-label="Open dashboard menu" aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <!-- Left -->
+
+                <div class="nouriva-dashboard-header-left">
+
+                    <span>
+                        CUSTOMER DASHBOARD
+                    </span>
+
+                    <h1>
+                        Billing & Payments
+                    </h1>
+
+                </div>
+
+
+                <!-- Right -->
+
+                <div class="nouriva-dashboard-header-right">
+
+
+                    <!-- Notification -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon nouriva-notification-button"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="nouriva-notification-badge">
+                            3
+                        </span>
+
+                    </button>
+
+                    <!-- Settings -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" aria-label="Settings">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                    </button>
+
+
+                    <!-- Dark Mode -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-theme-toggle"
+                        aria-label="Toggle dark mode">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+
+                    <!-- RTL -->
+
+                    <button type="button" class="nouriva-dashboard-header-icon" id="dashboard-rtl-toggle"
+                        aria-label="Toggle RTL">
+
+                        <i class="fa-solid fa-right-left"></i>
+
+                    </button>
+
+
+                    <!-- Customer Profile -->
+
+                    <button type="button" class="nouriva-dashboard-profile">
+
+                        <div class="nouriva-dashboard-avatar">
+
+                            <img src="images/customer-profile.jpg" alt="Priya Sharma">
+
+                        </div>
+
+                        <div class="nouriva-dashboard-profile-info">
+
+                            <strong>
+                                Priya Sharma
+                            </strong>
+
+                            <span>
+                                Customer
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <main class="nouriva-dashboard-content">
+
+
+                <!-- =================================================
+                 SECTION 01
+                 PAYMENT OVERVIEW
+            ================================================== -->
+
+                <section class="billing-overview-section">
+
+
+                    <div class="billing-overview-heading">
+
+                        <div>
+
+                            <span>
+                                PAYMENT OVERVIEW
+                            </span>
+
+                            <h2>
+                                Everything looks good.
+                            </h2>
+
+                            <p>
+                                Your latest payment was successful
+                                and your next billing cycle is scheduled.
+                            </p>
+
+                        </div>
+
+
+                        <div class="billing-payment-status">
+
+                            <span></span>
+
+                            Payments up to date
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="billing-overview-layout">
+
+
+                        <!-- Main Amount -->
+
+                        <div class="billing-main-balance">
+
+                            <div class="billing-balance-top">
+
+                                <span>
+                                    NEXT PAYMENT
+                                </span>
+
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </div>
+
+
+                            <strong>
+                                ₹1,199
+                            </strong>
+
+
+                            <p>
+                                Scheduled for
+                                <b>24 Aug 2026</b>
+                            </p>
+
+
+                            <div class="billing-balance-actions">
+
+                                <button type="button" id="billing-pay-now">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                    Pay Now
+
+                                </button>
+
+
+                                <button type="button" id="billing-download-statement">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Statement
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Stats -->
+
+                        <div class="billing-overview-stats">
+
+
+                            <div class="billing-overview-stat">
+
+                                <div class="billing-stat-icon">
+
+                                    <i class="fa-solid fa-leaf"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        CURRENT PLAN
+                                    </span>
+
+                                    <strong>
+                                        Balanced
+                                    </strong>
+
+                                    <small>
+                                        Weekly subscription
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="billing-overview-stat">
+
+                                <div class="billing-stat-icon">
+
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        LAST PAYMENT
+                                    </span>
+
+                                    <strong>
+                                        ₹1,199
+                                    </strong>
+
+                                    <small>
+                                        18 Aug 2026
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="billing-overview-stat">
+
+                                <div class="billing-stat-icon">
+
+                                    <i class="fa-solid fa-chart-line"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        TOTAL PAID
+                                    </span>
+
+                                    <strong>
+                                        ₹8,394
+                                    </strong>
+
+                                    <small>
+                                        Since joining
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="billing-overview-stat">
+
+                                <div class="billing-stat-icon">
+
+                                    <i class="fa-solid fa-circle-check"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <span>
+                                        PAYMENT STATUS
+                                    </span>
+
+                                    <strong>
+                                        Paid
+                                    </strong>
+
+                                    <small>
+                                        No pending dues
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 02
+                 PAYMENT METHODS
+            ================================================== -->
+
+                <section class="billing-methods-section">
+
+
+                    <div class="billing-section-heading">
+
+                        <div>
+
+                            <span>
+                                PAYMENT METHODS
+                            </span>
+
+                            <h2>
+                                How would you like to pay?
+                            </h2>
+
+                        </div>
+
+
+                        <button type="button" id="add-payment-method">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add Payment Method
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="billing-methods-layout">
+
+
+                        <!-- Primary Card -->
+
+                        <div class="billing-card-wrapper">
+
+
+                            <div class="billing-payment-card">
+
+
+                                <div class="billing-card-top">
+
+                                    <div class="billing-card-brand">
+
+                                        VISA
+
+                                    </div>
+
+                                    <span>
+                                        PRIMARY
+                                    </span>
+
+                                </div>
+
+
+                                <div class="billing-card-number">
+
+                                    •••• &nbsp; •••• &nbsp; •••• &nbsp; 4821
+
+                                </div>
+
+
+                                <div class="billing-card-bottom">
+
+                                    <div>
+
+                                        <span>
+                                            CARDHOLDER
+                                        </span>
+
+                                        <strong>
+                                            Priya Sharma
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span>
+                                            EXPIRES
+                                        </span>
+
+                                        <strong>
+                                            08 / 28
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="billing-card-actions">
+
+                                <button type="button">
+
+                                    <i class="fa-solid fa-pen"></i>
+
+                                    Edit
+
+                                </button>
+
+
+                                <button type="button">
+
+                                    <i class="fa-solid fa-star"></i>
+
+                                    Primary
+
+                                </button>
+
+
+                                <button type="button" class="billing-remove-card">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                    Remove
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- UPI -->
+
+                        <div class="billing-upi-card">
+
+
+                            <div class="billing-upi-icon">
+
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            </div>
+
+
+                            <div class="billing-upi-content">
+
+                                <span>
+                                    UPI PAYMENT
+                                </span>
+
+                                <h3>
+                                    priya@upi
+                                </h3>
+
+                                <p>
+                                    Available for quick and secure payments.
+                                </p>
+
+                            </div>
+
+
+                            <button type="button">
+
+                                Manage
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <!-- Add New -->
+
+                        <button type="button" class="billing-add-method" id="billing-add-method-card">
+
+                            <div>
+
+                                <i class="fa-solid fa-plus"></i>
+
+                            </div>
+
+                            <strong>
+                                Add another method
+                            </strong>
+
+                            <span>
+                                Card, UPI or other supported methods
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 03
+                 TRANSACTION HISTORY
+            ================================================== -->
+
+                <section class="billing-transactions-section">
+
+
+                    <div class="billing-section-heading billing-transactions-heading">
+
+                        <div>
+
+                            <span>
+                                PAYMENT ACTIVITY
+                            </span>
+
+                            <h2>
+                                Transaction history
+                            </h2>
+
+                        </div>
+
+
+                        <div class="billing-transaction-filters">
+
+
+                            <button type="button" class="billing-filter active" data-filter="all">
+
+                                All
+
+                            </button>
+
+
+                            <button type="button" class="billing-filter" data-filter="paid">
+
+                                Paid
+
+                            </button>
+
+
+                            <button type="button" class="billing-filter" data-filter="pending">
+
+                                Pending
+
+                            </button>
+
+
+                            <button type="button" class="billing-filter" data-filter="failed">
+
+                                Failed
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="billing-table-wrapper">
+
+                        <table class="billing-transactions-table">
+
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        DATE
+                                    </th>
+
+                                    <th>
+                                        DESCRIPTION
+                                    </th>
+
+                                    <th>
+                                        METHOD
+                                    </th>
+
+                                    <th>
+                                        AMOUNT
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                    <th>
+                                        ACTION
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr data-status="paid">
+
+                                    <td>
+                                        <strong>
+                                            18 Aug 2026
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="billing-transaction-description">
+
+                                            <div>
+
+                                                <i class="fa-solid fa-leaf"></i>
+
+                                            </div>
+
+                                            <span>
+
+                                                <strong>
+                                                    Balanced Plan
+                                                </strong>
+
+                                                <small>
+                                                    Weekly subscription
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Visa •••• 4821
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹1,199
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="billing-status paid">
+                                            <span></span>
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button type="button" class="billing-invoice-button"
+                                            data-invoice="INV-2026-0818">
+
+                                            View Invoice
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-status="paid">
+
+                                    <td>
+                                        <strong>
+                                            11 Aug 2026
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="billing-transaction-description">
+
+                                            <div>
+
+                                                <i class="fa-solid fa-leaf"></i>
+
+                                            </div>
+
+                                            <span>
+
+                                                <strong>
+                                                    Balanced Plan
+                                                </strong>
+
+                                                <small>
+                                                    Weekly subscription
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Visa •••• 4821
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹1,199
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="billing-status paid">
+                                            <span></span>
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button type="button" class="billing-invoice-button"
+                                            data-invoice="INV-2026-0811">
+
+                                            View Invoice
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-status="paid">
+
+                                    <td>
+                                        <strong>
+                                            04 Aug 2026
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="billing-transaction-description">
+
+                                            <div>
+
+                                                <i class="fa-solid fa-leaf"></i>
+
+                                            </div>
+
+                                            <span>
+
+                                                <strong>
+                                                    Balanced Plan
+                                                </strong>
+
+                                                <small>
+                                                    Weekly subscription
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        UPI •••• priya@upi
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹1,199
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="billing-status paid">
+                                            <span></span>
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button type="button" class="billing-invoice-button"
+                                            data-invoice="INV-2026-0804">
+
+                                            View Invoice
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-status="paid">
+
+                                    <td>
+                                        <strong>
+                                            28 Jul 2026
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="billing-transaction-description">
+
+                                            <div>
+
+                                                <i class="fa-solid fa-leaf"></i>
+
+                                            </div>
+
+                                            <span>
+
+                                                <strong>
+                                                    Balanced Plan
+                                                </strong>
+
+                                                <small>
+                                                    Weekly subscription
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Visa •••• 4821
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹1,199
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="billing-status paid">
+                                            <span></span>
+                                            Paid
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button type="button" class="billing-invoice-button"
+                                            data-invoice="INV-2026-0728">
+
+                                            View Invoice
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr data-status="pending">
+
+                                    <td>
+                                        <strong>
+                                            24 Aug 2026
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="billing-transaction-description">
+
+                                            <div>
+
+                                                <i class="fa-solid fa-calendar-check"></i>
+
+                                            </div>
+
+                                            <span>
+
+                                                <strong>
+                                                    Upcoming Payment
+                                                </strong>
+
+                                                <small>
+                                                    Scheduled renewal
+                                                </small>
+
+                                            </span>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Visa •••• 4821
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹1,199
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="billing-status pending">
+                                            <span></span>
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button type="button" class="billing-invoice-button">
+
+                                            Scheduled
+
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div class="billing-table-footer">
+
+                        <span>
+                            Showing 5 transactions
+                        </span>
+
+
+                        <button type="button" id="billing-view-all">
+
+                            View All Transactions
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                 SECTION 04
+                 INVOICES + PREFERENCES
+            ================================================== -->
+
+                <section class="billing-preferences-section">
+
+
+                    <div class="billing-preferences-layout">
+
+
+                        <!-- Recent Invoices -->
+
+                        <div class="billing-invoices-panel">
+
+
+                            <div class="billing-section-heading">
+
+                                <div>
+
+                                    <span>
+                                        DOCUMENTS
+                                    </span>
+
+                                    <h2>
+                                        Recent invoices
+                                    </h2>
+
+                                </div>
+
+
+                                <button type="button" id="billing-all-invoices">
+
+                                    View All
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="billing-invoice-list">
+
+
+                                <div class="billing-invoice-item">
+
+                                    <div class="billing-invoice-icon">
+
+                                        <i class="fa-regular fa-file-lines"></i>
+
+                                    </div>
+
+
+                                    <div class="billing-invoice-info">
+
+                                        <strong>
+                                            August 2026
+                                        </strong>
+
+                                        <span>
+                                            Balanced Plan · ₹1,199
+                                        </span>
+
+                                    </div>
+
+
+                                    <button type="button" class="billing-download-invoice">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <div class="billing-invoice-item">
+
+                                    <div class="billing-invoice-icon">
+
+                                        <i class="fa-regular fa-file-lines"></i>
+
+                                    </div>
+
+
+                                    <div class="billing-invoice-info">
+
+                                        <strong>
+                                            July 2026
+                                        </strong>
+
+                                        <span>
+                                            Balanced Plan · ₹1,199
+                                        </span>
+
+                                    </div>
+
+
+                                    <button type="button" class="billing-download-invoice">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                    </button>
+
+                                </div>
+
+
+
+                                <div class="billing-invoice-item">
+
+                                    <div class="billing-invoice-icon">
+
+                                        <i class="fa-regular fa-file-lines"></i>
+
+                                    </div>
+
+
+                                    <div class="billing-invoice-info">
+
+                                        <strong>
+                                            June 2026
+                                        </strong>
+
+                                        <span>
+                                            Balanced Plan · ₹1,199
+                                        </span>
+
+                                    </div>
+
+
+                                    <button type="button" class="billing-download-invoice">
+
+                                        <i class="fa-solid fa-download"></i>
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Billing Preferences -->
+
+                        <div class="billing-preferences-panel">
+
+
+                            <div class="billing-section-heading">
+
+                                <div>
+
+                                    <span>
+                                        PREFERENCES
+                                    </span>
+
+                                    <h2>
+                                        Billing preferences
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="billing-preference-list">
+
+
+                                <div class="billing-preference-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Email invoices
+                                        </strong>
+
+                                        <span>
+                                            Receive invoices by email
+                                        </span>
+
+                                    </div>
+
+
+                                    <label class="billing-switch">
+
+                                        <input type="checkbox" checked>
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="billing-preference-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Payment reminders
+                                        </strong>
+
+                                        <span>
+                                            Get notified before payments
+                                        </span>
+
+                                    </div>
+
+
+                                    <label class="billing-switch">
+
+                                        <input type="checkbox" checked>
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="billing-preference-row">
+
+                                    <div>
+
+                                        <strong>
+                                            Renewal alerts
+                                        </strong>
+
+                                        <span>
+                                            Receive subscription reminders
+                                        </span>
+
+                                    </div>
+
+
+                                    <label class="billing-switch">
+
+                                        <input type="checkbox" checked>
+
+                                        <span></span>
+
+                                    </label>
+
+                                </div>
+
+
+
+                                <div class="billing-email-row">
+
+                                    <span>
+                                        BILLING EMAIL
+                                    </span>
+
+                                    <strong>
+                                        priya@example.com
+                                    </strong>
+
+                                </div>
+
+
+
+                                <div class="billing-currency-row">
+
+                                    <span>
+                                        CURRENCY
+                                    </span>
+
+                                    <strong>
+                                        INR ₹
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Support -->
+
+                    <div class="billing-support-box">
+
+                        <div class="billing-support-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                NEED HELP?
+                            </span>
+
+                            <h3>
+                                Have a question about a payment?
+                            </h3>
+
+                            <p>
+                                Our billing team is here to help
+                                with invoices, payments and refunds.
+                            </p>
+
+                        </div>
+
+
+                        <button type="button" id="billing-contact-support">
+
+                            Contact Billing Support
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main JS -->
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>
