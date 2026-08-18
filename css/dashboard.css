@@ -15956,6 +15956,16 @@ html[data-theme="dark"] .nouriva-sidebar-quick-action-label {
     color: var(--text-light);
 }
 
+html[data-theme="dark"] .nouriva-sidebar-quick-action.is-active i,
+html[data-dashboard-theme="dark"] .nouriva-sidebar-quick-action.is-active i {
+    color: var(--white);
+}
+
+html[data-theme="dark"] .nouriva-sidebar-quick-action.is-active .nouriva-sidebar-quick-action-label,
+html[data-dashboard-theme="dark"] .nouriva-sidebar-quick-action.is-active .nouriva-sidebar-quick-action-label {
+    color: var(--white);
+}
+
 html[data-theme="dark"] .nouriva-dashboard-sidebar-divider {
     background-color: var(--border-color);
 }
@@ -17522,4 +17532,506 @@ html[data-dashboard-theme="dark"] .subscription-timeline-item {
 /* Keep timeline line */
 html[data-dashboard-theme="dark"] .subscription-timeline::before {
     box-shadow: none !important;
+}
+
+/* =========================================================
+   ACCOUNT SETTINGS - DARK MODE DATE ICON FIX
+========================================================= */
+
+html[data-theme="dark"] #account-dob::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(2) !important;
+    opacity: 1 !important;
+    cursor: pointer !important;
+}
+
+/* =========================================================
+   FINAL STRONG OVERRIDE
+   REMOVE DARK BOX FROM "EXPLORE OTHER PLANS" HEADING
+========================================================= */
+
+html[data-dashboard-theme="dark"] .meal-plan-explorer {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    border-color: transparent !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+
+    filter: none !important;
+}
+
+/* Heading itself */
+html[data-dashboard-theme="dark"] .meal-plan-explorer-heading {
+    background: transparent !important;
+    background-color: transparent !important;
+
+    border: none !important;
+    border-color: transparent !important;
+
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Remove any pseudo-element creating the background */
+html[data-dashboard-theme="dark"] .meal-plan-explorer::before,
+html[data-dashboard-theme="dark"] .meal-plan-explorer::after,
+html[data-dashboard-theme="dark"] .meal-plan-explorer-heading::before,
+html[data-dashboard-theme="dark"] .meal-plan-explorer-heading::after {
+    content: none !important;
+    display: none !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* =========================================================
+   iPAD MINI - FULL BILLING TABLE / NO HORIZONTAL SCROLL
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .billing-table-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+        overflow-y: hidden !important;
+
+        -webkit-overflow-scrolling: auto !important;
+    }
+
+    .billing-transactions-table {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+
+        table-layout: fixed !important;
+    }
+
+    /* DATE */
+    .billing-transactions-table th:nth-child(1),
+    .billing-transactions-table td:nth-child(1) {
+        width: 14% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    /* DESCRIPTION */
+    .billing-transactions-table th:nth-child(2),
+    .billing-transactions-table td:nth-child(2) {
+        width: 25% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    /* METHOD */
+    .billing-transactions-table th:nth-child(3),
+    .billing-transactions-table td:nth-child(3) {
+        width: 18% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+    }
+
+    /* AMOUNT */
+    .billing-transactions-table th:nth-child(4),
+    .billing-transactions-table td:nth-child(4) {
+        width: 13% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        white-space: nowrap !important;
+    }
+
+    /* STATUS */
+    .billing-transactions-table th:nth-child(5),
+    .billing-transactions-table td:nth-child(5) {
+        width: 15% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        white-space: nowrap !important;
+    }
+
+    /* ACTION */
+    .billing-transactions-table th:nth-child(6),
+    .billing-transactions-table td:nth-child(6) {
+        width: 15% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding-left: 6px !important;
+        padding-right: 6px !important;
+        white-space: nowrap !important;
+    }
+
+    /* Prevent text from expanding the table */
+    .billing-transactions-table td,
+    .billing-transactions-table th {
+        overflow: hidden !important;
+    }
+
+    .billing-transaction-description strong,
+    .billing-transaction-description small {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .billing-transactions-table th:nth-child(1),
+    .billing-transactions-table td:nth-child(1) {
+        padding-left: 14px !important;
+    }
+
+}
+
+/* =========================================================
+   FINAL STRONG MOBILE OVERFLOW FIX
+   DASHBOARD - DELIVERY + BILLING
+========================================================= */
+
+@media only screen and (max-width: 767px) {
+
+    /* Main dashboard containers */
+    .nouriva-dashboard-layout,
+    .nouriva-dashboard-main,
+    .nouriva-dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    /* Keep the header fixed on mobile so navigation/actions stay visible */
+    .nouriva-dashboard-main {
+        padding-top: clamp(70px, 10vw, 76px) !important;
+    }
+
+    .nouriva-dashboard-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        z-index: 1001 !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+
+    /* =====================================================
+       DELIVERY + BILLING SECTION
+    ===================================================== */
+
+    .dash-operations-zone {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .dash-operations-grid {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: minmax(0, 1fr) !important;
+
+        gap: 12px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       BOTH CARDS
+    ===================================================== */
+
+    .dash-delivery-panel,
+    .dash-billing-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        padding: 18px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =====================================================
+       HEADING
+    ===================================================== */
+
+    .dash-operation-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: space-between !important;
+
+        gap: 10px !important;
+    }
+
+    .dash-operation-heading>div {
+        min-width: 0 !important;
+        max-width: calc(100% - 35px) !important;
+    }
+
+    .dash-operation-heading h3 {
+        max-width: 100% !important;
+
+        font-size: 18px !important;
+        line-height: 1.25 !important;
+
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    .dash-operation-heading>i {
+        flex: 0 0 auto !important;
+    }
+
+
+    /* =====================================================
+       DELIVERY DATE
+    ===================================================== */
+
+    .dash-delivery-date {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       DELIVERY ADDRESS
+    ===================================================== */
+
+    .dash-delivery-address {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: 38px minmax(0, 1fr) 22px !important;
+
+        gap: 8px !important;
+
+        padding: 11px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+    .dash-delivery-address>div {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .dash-delivery-address strong,
+    .dash-delivery-address p {
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+        word-break: normal !important;
+    }
+
+
+    /* =====================================================
+       DELIVERY PROGRESS
+       REMOVE THE 330px FORCED WIDTH
+    ===================================================== */
+
+    .dash-delivery-progress {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .dash-delivery-line,
+    .dash-delivery-steps {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .dash-delivery-steps {
+        display: flex !important;
+        justify-content: space-between !important;
+
+        gap: 4px !important;
+    }
+
+    .dash-delivery-steps div {
+        min-width: 0 !important;
+        flex: 1 1 0 !important;
+
+        text-align: center !important;
+
+        white-space: nowrap !important;
+
+        font-size: 7px !important;
+    }
+
+
+    /* =====================================================
+       DELIVERY DETAILS
+    ===================================================== */
+
+    .dash-delivery-details {
+        max-width: 100% !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+
+        gap: 6px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =====================================================
+       BILLING AMOUNT
+    ===================================================== */
+
+    .dash-billing-amount {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .dash-billing-amount strong,
+    .dash-billing-amount p {
+        max-width: 100% !important;
+
+        overflow-wrap: break-word !important;
+    }
+
+
+    /* =====================================================
+       PAYMENT METHOD
+    ===================================================== */
+
+    .dash-payment-method {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: 40px minmax(0, 1fr) auto !important;
+
+        gap: 8px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+    }
+
+    .dash-payment-method>* {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .dash-payment-method strong,
+    .dash-payment-method span {
+        max-width: 100% !important;
+
+        overflow-wrap: anywhere !important;
+    }
+
+
+    /* =====================================================
+       BILLING LINKS
+    ===================================================== */
+
+    .dash-billing-links {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+
+        grid-template-columns: minmax(0, 1fr) !important;
+
+        box-sizing: border-box !important;
+    }
+
+    .dash-billing-links>* {
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL - 360px
+========================================================= */
+
+@media only screen and (max-width: 380px) {
+
+    .dash-delivery-panel,
+    .dash-billing-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding: 16px !important;
+    }
+
+    .dash-operation-heading h3 {
+        font-size: 17px !important;
+    }
+
+    .dash-delivery-address {
+        grid-template-columns: 35px minmax(0, 1fr) 20px !important;
+
+        gap: 7px !important;
+
+        padding: 10px !important;
+    }
+
+    .dash-address-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+
+    .dash-delivery-steps div {
+        font-size: 6.5px !important;
+    }
 }

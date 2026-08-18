@@ -16560,19 +16560,30 @@ body {
 
     .h2-final-copy {
         text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
     }
 
     .h2-final-copy h2 {
+        max-width: 92%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 40px;
+        line-height: 1.12;
     }
 
     .h2-final-copy p {
+        max-width: 88%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 15px;
+        line-height: 1.75;
     }
 
     .h2-final-actions {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 12px;
     }
 
     .h2-final-visual {
@@ -17332,31 +17343,53 @@ body {
 
     .h2-final-copy {
         text-align: center;
+        max-width: 560px;
+        margin: 0 auto;
     }
 
     .h2-final-label {
+        display: block;
         font-size: 10px;
     }
 
     .h2-final-copy h2 {
+        max-width: 94%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 33px;
+        line-height: 1.12;
     }
 
     .h2-final-copy p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         font-size: 14px;
         line-height: 1.7;
     }
 
     .h2-final-actions {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         gap: 10px;
     }
 
     .h2-final-primary,
     .h2-final-secondary {
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         justify-content: center;
+        white-space: nowrap;
+    }
+
+    .h2-final-primary {
+        min-width: 190px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .h2-final-secondary {
+        align-self: center;
     }
 
     .h2-final-visual {
@@ -22031,6 +22064,10 @@ body {
         top: 18px !important;
         right: 18px !important;
     }
+
+    .nouriva-register-controls {
+        position: absolute;
+    }
 }
 
 
@@ -22175,6 +22212,14 @@ body {
 
     .nouriva-register-button {
         height: 50px;
+    }
+
+    .nouriva-register-login-text {
+        margin-top: 21px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
     }
 
 
@@ -26632,4 +26677,1289 @@ html[data-theme="dark"] .register-mode-toggle {
         background-color 0.3s ease,
         color 0.3s ease,
         border-color 0.3s ease;
+}
+
+/* =========================================================
+   HOW NOURIVA WORKS - DARK MODE TEXT FIX
+========================================================= */
+
+html[data-theme="dark"] .nouriva-process .process-heading h2,
+html[data-theme="dark"] .nouriva-process .process-heading h2 span,
+html[data-theme="dark"] .nouriva-process .process-step-content h3 {
+    color: #f6f1e7 !important;
+}
+
+html[data-theme="dark"] .nouriva-process .process-heading p,
+html[data-theme="dark"] .nouriva-process .process-step-content p {
+    color: #b7bcb2 !important;
+}
+
+html[data-theme="dark"] .nouriva-process .process-label,
+html[data-theme="dark"] .nouriva-process .process-step-label {
+    color: #8da287 !important;
+}
+
+html[data-theme="dark"] .nouriva-process .process-step-content a {
+    color: #8da287 !important;
+}
+
+html[data-theme="dark"] .nouriva-process .process-step-content a:hover {
+    color: #f6f1e7 !important;
+}
+
+html[data-theme="dark"] .nouriva-process .process-marker span {
+    color: #8da287 !important;
+}
+
+/* =========================================================
+   FINAL RTL FIX - HOME 2 HERO
+   Prevent availability card from overlapping hero content
+========================================================= */
+
+html[dir="rtl"] .nouriva-h2-hero {
+    direction: rtl !important;
+}
+
+/* Move availability card to RTL-safe left side */
+html[dir="rtl"] .nouriva-h2-availability {
+    right: auto !important;
+    left: 55px !important;
+
+    top: 55px !important;
+
+    z-index: 10 !important;
+
+    max-width: 280px !important;
+    min-width: 280px !important;
+
+    direction: rtl !important;
+}
+
+/* Keep availability content properly aligned */
+html[dir="rtl"] .nouriva-h2-availability-copy {
+    text-align: right !important;
+}
+
+html[dir="rtl"] .nouriva-h2-availability-arrow {
+    transform: rotate(180deg) !important;
+}
+
+/* Keep hero content away from availability card */
+html[dir="rtl"] .nouriva-h2-content {
+    padding-left: 360px !important;
+    padding-right: 15px !important;
+
+    text-align: right !important;
+}
+
+/* Hero heading should not go underneath the card */
+html[dir="rtl"] .nouriva-h2-content h1,
+html[dir="rtl"] .nouriva-h2-content>p {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* Bottom information stays centered */
+html[dir="rtl"] .nouriva-h2-bottom {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%) !important;
+    direction: rtl !important;
+}
+
+/* Scroll indicator moves to left in RTL */
+html[dir="rtl"] .nouriva-h2-scroll {
+    right: auto !important;
+    left: 32px !important;
+}
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 991px) {
+
+    html[dir="rtl"] .nouriva-h2-availability {
+        left: 25px !important;
+        right: auto !important;
+        top: 25px !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-content {
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        text-align: center !important;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    html[dir="rtl"] .nouriva-h2-availability {
+        left: 15px !important;
+        right: 15px !important;
+        top: 15px !important;
+
+        width: calc(100% - 30px) !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-content {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        padding-top: 150px !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-scroll {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   🔥 STRONG RTL FIX - HOME 2 COLLECTION CARDS
+   Prevent text + external icon overlap
+========================================================= */
+
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-card {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+
+/* Card content */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-content {
+    position: absolute !important;
+
+    left: 27px !important;
+    right: 27px !important;
+    bottom: 25px !important;
+
+    width: auto !important;
+
+    padding-left: 55px !important;
+    padding-right: 0 !important;
+
+    text-align: right !important;
+
+    z-index: 20 !important;
+}
+
+
+/* Description - reserve space for icon */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>p {
+    width: calc(100% - 55px) !important;
+    max-width: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: right !important;
+
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+}
+
+
+/* Heading */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>h3 {
+    width: calc(100% - 55px) !important;
+
+    margin-bottom: 8px !important;
+
+    text-align: right !important;
+}
+
+
+/* Small category text */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>span {
+    width: calc(100% - 55px) !important;
+
+    display: block !important;
+
+    text-align: right !important;
+}
+
+
+/* 🔥 External link icon - FORCE LEFT */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>i {
+    position: absolute !important;
+
+    left: 0 !important;
+    right: auto !important;
+
+    bottom: 0 !important;
+
+    width: 40px !important;
+    height: 40px !important;
+
+    margin: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 30 !important;
+
+    transform: none !important;
+}
+
+
+/* Prevent hover transform from moving icon into text */
+html[dir="rtl"] .nouriva-h2-collections .h2-collection-card:hover .h2-collection-content>i {
+    left: 0 !important;
+    right: auto !important;
+
+    transform: translate(-3px, -3px) !important;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content {
+        left: 20px !important;
+        right: 20px !important;
+        bottom: 20px !important;
+
+        padding-left: 50px !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>p,
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>h3,
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>span {
+        width: calc(100% - 50px) !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>i {
+        left: 0 !important;
+        right: auto !important;
+
+        width: 38px !important;
+        height: 38px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 575px) {
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content {
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+
+        padding-left: 45px !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>p,
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>h3,
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>span {
+        width: calc(100% - 45px) !important;
+    }
+
+    html[dir="rtl"] .nouriva-h2-collections .h2-collection-content>i {
+        left: 0 !important;
+        right: auto !important;
+
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+/* =========================================================
+   🔥 FINAL STRONG RTL FIX
+   ABOUT FINAL CTA
+   TEXT = RIGHT
+   IMAGE = LEFT
+   NO OVERLAP
+========================================================= */
+
+@media (min-width: 992px) {
+
+    /* Main CTA */
+    html[dir="rtl"] .about-final-cta {
+        direction: rtl !important;
+        overflow: hidden !important;
+    }
+
+    /* CTA wrapper */
+    html[dir="rtl"] .about-final-cta-inner {
+        position: relative !important;
+        overflow: hidden !important;
+
+        min-height: 610px !important;
+        padding: 80px 60px 100px !important;
+    }
+
+
+    /* =====================================================
+       CONTENT → FORCE FULLY RIGHT
+    ===================================================== */
+
+    html[dir="rtl"] .about-final-cta-content {
+        position: absolute !important;
+
+        /* FORCE RIGHT */
+        right: 60px !important;
+        left: auto !important;
+
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+
+        /* Keep enough room for image */
+        width: 52% !important;
+        max-width: 700px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: right !important;
+
+        z-index: 50 !important;
+    }
+
+
+    /* Label */
+    html[dir="rtl"] .about-final-cta-label {
+        display: block !important;
+
+        width: 100% !important;
+
+        margin: 0 0 18px 0 !important;
+
+        text-align: right !important;
+    }
+
+
+    /* Heading */
+    html[dir="rtl"] .about-final-cta-content h2 {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 700px !important;
+
+        margin: 0 0 25px 0 !important;
+
+        text-align: right !important;
+
+        line-height: 1.08 !important;
+    }
+
+
+    /* Heading second line */
+    html[dir="rtl"] .about-final-cta-content h2 span {
+        display: block !important;
+
+        text-align: right !important;
+    }
+
+
+    /* Paragraph */
+    html[dir="rtl"] .about-final-cta-content>p {
+        display: block !important;
+
+        width: 100% !important;
+        max-width: 560px !important;
+
+        margin: 0 0 30px auto !important;
+
+        text-align: right !important;
+
+        line-height: 1.8 !important;
+    }
+
+
+    /* =====================================================
+       BUTTONS → RIGHT
+    ===================================================== */
+
+    html[dir="rtl"] .about-final-cta-actions {
+        width: 100% !important;
+
+        display: flex !important;
+
+        flex-direction: row !important;
+
+        justify-content: flex-start !important;
+
+        align-items: center !important;
+
+        gap: 25px !important;
+
+        direction: rtl !important;
+    }
+
+
+    html[dir="rtl"] .about-final-cta-primary,
+    html[dir="rtl"] .about-final-cta-secondary {
+        flex-shrink: 0 !important;
+    }
+
+
+    /* =====================================================
+       IMAGE → FORCE LEFT
+    ===================================================== */
+
+    html[dir="rtl"] .about-final-cta-visual {
+        position: absolute !important;
+
+        left: 55px !important;
+        right: auto !important;
+
+        top: 50% !important;
+
+        width: 390px !important;
+        height: 390px !important;
+
+        margin: 0 !important;
+
+        transform: translateY(-50%) !important;
+
+        z-index: 5 !important;
+    }
+
+
+    /* =====================================================
+       FLOATING NOTE → STAY WITH IMAGE
+    ===================================================== */
+
+    html[dir="rtl"] .about-final-cta-note {
+        position: absolute !important;
+
+        left: auto !important;
+        right: -25px !important;
+
+        bottom: 35px !important;
+
+        z-index: 60 !important;
+    }
+
+
+    /* =====================================================
+       BOTTOM LINE
+    ===================================================== */
+
+    html[dir="rtl"] .about-final-cta-bottom {
+        position: absolute !important;
+
+        left: 60px !important;
+        right: 60px !important;
+
+        bottom: 23px !important;
+
+        direction: rtl !important;
+
+        justify-content: flex-start !important;
+
+        text-align: right !important;
+
+        z-index: 20 !important;
+    }
+}
+
+
+/* =========================================================
+   1200 - 1399px
+========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    html[dir="rtl"] .about-final-cta-content {
+        right: 50px !important;
+        width: 53% !important;
+        max-width: 650px !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-visual {
+        left: 40px !important;
+
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+
+
+/* =========================================================
+   992 - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    html[dir="rtl"] .about-final-cta-inner {
+        min-height: 560px !important;
+        padding: 60px 35px 90px !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-content {
+        right: 35px !important;
+
+        width: 50% !important;
+        max-width: 560px !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-visual {
+        left: 25px !important;
+
+        width: 320px !important;
+        height: 320px !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-content h2 {
+        font-size: 42px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   DON'T USE DESKTOP ABSOLUTE POSITIONING
+========================================================= */
+
+@media (max-width: 991px) {
+
+    html[dir="rtl"] .about-final-cta-inner {
+        position: relative !important;
+
+        min-height: auto !important;
+
+        padding: 50px 25px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        overflow: hidden !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-content {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 100% !important;
+        max-width: 650px !important;
+
+        margin: 0 0 35px auto !important;
+
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-content h2,
+    html[dir="rtl"] .about-final-cta-content h2 span,
+    html[dir="rtl"] .about-final-cta-content>p,
+    html[dir="rtl"] .about-final-cta-label {
+        text-align: right !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-actions {
+        justify-content: flex-start !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-visual {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+
+        transform: none !important;
+
+        width: 280px !important;
+        height: 280px !important;
+
+        margin: 20px auto 0 !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-note {
+        right: -5px !important;
+        left: auto !important;
+        bottom: 15px !important;
+    }
+
+    html[dir="rtl"] .about-final-cta-bottom {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        margin-top: 35px !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+    }
+}
+
+/* RTL - Move ONLY the vertical line to icon center */
+@media (min-width: 992px) {
+
+    html[dir="rtl"] .meal-flex-steps::before {
+        left: auto !important;
+        right: 90px !important;
+    }
+
+}
+
+/* =========================================================
+   RTL TABLET - LEFT & RIGHT GAP
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    html[dir="rtl"] .h2-subscription-stage {
+        width: calc(100% - 40px) !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    html[dir="rtl"] .h2-dashboard-preview {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
+
+/* =========================================================
+   iPAD MINI - SUBSCRIPTION FOOTER SIDE SPACE
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .nouriva-h2-subscription .h2-subscription-footer {
+        width: calc(100% - 40px) !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+
+        box-sizing: border-box !important;
+    }
+
+}
+
+/* =========================================================
+   NOURIVA FOOTER
+   iPAD PRO SAME ALIGNMENT AS iPAD MINI
+   1024px - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .site-footer {
+        padding-top: 65px !important;
+    }
+
+    .site-footer .footer-top {
+        display: grid !important;
+
+        /* EXACTLY SAME 2-COLUMN STRUCTURE AS iPAD MINI */
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 40px !important;
+
+        padding-bottom: 55px !important;
+    }
+
+    /* -----------------------------------------
+       BRAND — LEFT COLUMN
+    ----------------------------------------- */
+
+    .site-footer .footer-brand {
+        grid-column: auto !important;
+        max-width: 100% !important;
+
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    /* -----------------------------------------
+       QUICK LINKS — RIGHT COLUMN
+    ----------------------------------------- */
+
+    .site-footer .footer-column:nth-child(2) {
+        grid-column: auto !important;
+
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    /* -----------------------------------------
+       CUSTOMER — LEFT COLUMN
+    ----------------------------------------- */
+
+    .site-footer .footer-column:nth-child(3) {
+        grid-column: auto !important;
+
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    /* -----------------------------------------
+       GET IN TOUCH — RIGHT COLUMN
+    ----------------------------------------- */
+
+    .site-footer .footer-contact {
+        grid-column: auto !important;
+
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    /* Keep all footer content left aligned */
+
+    .site-footer .footer-column h4 {
+        text-align: left !important;
+    }
+
+    .site-footer .footer-column ul {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .site-footer .footer-column li {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .site-footer .footer-contact li {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    /* Footer bottom stays same */
+
+    .site-footer .footer-bottom {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        flex-direction: row !important;
+
+        gap: 20px !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE - CURRENTLY AVAILABLE CARD
+   STRONG COMPACT OVERRIDE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .h2-area-indicator {
+        width: 145px !important;
+        height: 30px !important;
+
+        min-width: 0 !important;
+        max-width: 145px !important;
+
+        padding: 0 8px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 6px !important;
+
+        box-sizing: border-box !important;
+
+        overflow: hidden !important;
+
+        border-radius: 4px !important;
+
+        left: 15px !important;
+        top: 15px !important;
+        bottom: auto !important;
+    }
+
+    .h2-area-indicator .h2-area-dot {
+        width: 5px !important;
+        height: 5px !important;
+
+        min-width: 5px !important;
+        min-height: 5px !important;
+
+        flex: 0 0 5px !important;
+
+        box-shadow: none !important;
+    }
+
+    .h2-area-indicator span:last-child {
+        display: block !important;
+
+        width: auto !important;
+
+        font-size: 7px !important;
+        line-height: 1 !important;
+
+        letter-spacing: 0.7px !important;
+
+        white-space: nowrap !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+
+/* VERY SMALL MOBILE */
+@media (max-width: 400px) {
+
+    .h2-area-indicator {
+        width: 130px !important;
+        max-width: 130px !important;
+        height: 27px !important;
+
+        padding: 0 7px !important;
+        gap: 5px !important;
+
+        left: 12px !important;
+        top: 12px !important;
+    }
+
+    .h2-area-indicator .h2-area-dot {
+        width: 4px !important;
+        height: 4px !important;
+
+        min-width: 4px !important;
+        min-height: 4px !important;
+
+        flex-basis: 4px !important;
+    }
+
+    .h2-area-indicator span:last-child {
+        font-size: 6.5px !important;
+        letter-spacing: 0.5px !important;
+    }
+}
+
+/* =========================================================
+   FINAL FINAL OVERRIDE
+   HOME 2 DELIVERY - MOBILE ALIGNMENT
+========================================================= */
+
+@media only screen and (max-width: 575px) {
+
+    /* DELIVERY SECTION */
+    section.nouriva-h2-delivery {
+        width: 100% !important;
+        padding: 55px 0 45px !important;
+        margin: 0 !important;
+        overflow: hidden !important;
+    }
+
+
+    /* INTRO - FULL CENTER */
+    section.nouriva-h2-delivery .h2-delivery-intro {
+        width: calc(100% - 30px) !important;
+        max-width: 340px !important;
+
+        margin: 0 auto 30px !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+    }
+
+    section.nouriva-h2-delivery .h2-delivery-intro h2 {
+        width: 100% !important;
+        max-width: 340px !important;
+
+        margin: 0 auto 14px !important;
+
+        font-size: 30px !important;
+        line-height: 1.18 !important;
+
+        text-align: center !important;
+    }
+
+    section.nouriva-h2-delivery .h2-delivery-intro p {
+        width: 100% !important;
+        max-width: 325px !important;
+
+        margin: 0 auto !important;
+
+        font-size: 13px !important;
+        line-height: 1.65 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* MAP */
+    section.nouriva-h2-delivery .h2-delivery-map {
+        position: relative !important;
+
+        width: calc(100% - 30px) !important;
+        max-width: 360px !important;
+
+        height: 560px !important;
+
+        margin: 0 auto !important;
+
+        overflow: hidden !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =====================================================
+       CURRENTLY AVAILABLE
+       TOP CENTER
+    ===================================================== */
+
+    section.nouriva-h2-delivery .h2-area-indicator {
+        position: absolute !important;
+
+        top: 15px !important;
+        bottom: auto !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        width: 145px !important;
+        max-width: 145px !important;
+        min-width: 145px !important;
+
+        height: 30px !important;
+
+        margin: 0 !important;
+        padding: 0 9px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        box-sizing: border-box !important;
+
+        white-space: nowrap !important;
+
+        z-index: 50 !important;
+    }
+
+    section.nouriva-h2-delivery .h2-area-indicator .h2-area-dot {
+        width: 5px !important;
+        height: 5px !important;
+
+        min-width: 5px !important;
+        min-height: 5px !important;
+
+        flex: 0 0 5px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-area-indicator span:last-child {
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        font-size: 7px !important;
+        line-height: 1 !important;
+
+        letter-spacing: .7px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =====================================================
+       LOCATION CARD
+       CENTER
+    ===================================================== */
+
+    section.nouriva-h2-delivery .h2-map-location {
+        position: absolute !important;
+
+        top: 22% !important;
+        left: 50% !important;
+        right: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        width: max-content !important;
+        max-width: calc(100% - 30px) !important;
+
+        margin: 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        z-index: 20 !important;
+    }
+
+    section.nouriva-h2-delivery .h2-location-card {
+        min-width: 150px !important;
+        width: 150px !important;
+
+        padding: 10px 12px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+    }
+
+
+    /* =====================================================
+       MAIN COVERAGE CARD
+       CENTER + PROPER WIDTH
+    ===================================================== */
+
+    section.nouriva-h2-delivery .h2-coverage-card {
+        position: absolute !important;
+
+        top: auto !important;
+        bottom: 15px !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        width: calc(100% - 30px) !important;
+        max-width: 330px !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+
+        padding: 20px 18px !important;
+
+        box-sizing: border-box !important;
+
+        text-align: center !important;
+
+        z-index: 30 !important;
+    }
+
+
+    section.nouriva-h2-delivery .h2-coverage-kicker {
+        display: block !important;
+
+        margin: 0 0 8px !important;
+
+        font-size: 8px !important;
+        line-height: 1.2 !important;
+
+        letter-spacing: 1.2px !important;
+
+        text-align: center !important;
+    }
+
+
+    section.nouriva-h2-delivery .h2-coverage-card h3 {
+        width: 100% !important;
+        max-width: 290px !important;
+
+        margin: 0 auto 10px !important;
+
+        font-size: 24px !important;
+        line-height: 1.18 !important;
+
+        text-align: center !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-card h3 span {
+        display: inline !important;
+    }
+
+
+    section.nouriva-h2-delivery .h2-coverage-card>p {
+        width: 100% !important;
+        max-width: 285px !important;
+
+        margin: 0 auto 14px !important;
+
+        font-size: 11px !important;
+        line-height: 1.55 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* INFO ROWS */
+    section.nouriva-h2-delivery .h2-coverage-info {
+        width: max-content !important;
+        max-width: 100% !important;
+
+        margin: 0 auto 14px !important;
+        padding: 12px 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+
+        gap: 7px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-info>div {
+        display: flex !important;
+        align-items: center !important;
+
+        gap: 7px !important;
+
+        white-space: nowrap !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-info i {
+        width: 23px !important;
+        height: 23px !important;
+
+        flex: 0 0 23px !important;
+
+        font-size: 9px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-info span {
+        font-size: 10px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* BUTTON */
+    section.nouriva-h2-delivery .h2-coverage-button {
+        width: 100% !important;
+        max-width: 270px !important;
+
+        min-height: 40px !important;
+
+        margin: 0 auto !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        font-size: 10px !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* DELIVERY FOOTER */
+    section.nouriva-h2-delivery .h2-delivery-footer {
+        width: calc(100% - 30px) !important;
+
+        margin: 18px auto 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 7px !important;
+
+        text-align: center !important;
+    }
+
+    section.nouriva-h2-delivery .h2-delivery-footer span,
+    section.nouriva-h2-delivery .h2-delivery-footer a {
+        font-size: 10px !important;
+        text-align: center !important;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL - 360px
+========================================================= */
+
+@media only screen and (max-width: 380px) {
+
+    section.nouriva-h2-delivery .h2-delivery-map {
+        width: calc(100% - 24px) !important;
+        max-width: 350px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-card {
+        width: calc(100% - 24px) !important;
+        max-width: 325px !important;
+
+        padding: 18px 15px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-card h3 {
+        font-size: 22px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-coverage-card>p {
+        font-size: 10.5px !important;
+    }
+
+    section.nouriva-h2-delivery .h2-area-indicator {
+        width: 135px !important;
+        min-width: 135px !important;
+        max-width: 135px !important;
+    }
+}
+
+/* =========================================================
+   LOGIN + REGISTER TOGGLES
+   MOBILE - NOT FIXED
+========================================================= */
+
+@media screen and (max-width: 991px) {
+
+    /* LOGIN */
+    html body .nouriva-login-page .nouriva-login-controls {
+        position: absolute !important;
+
+        top: 30px !important;
+        right: 18px !important;
+        left: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        z-index: 9999 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+
+        transform: none !important;
+    }
+
+
+    /* REGISTER */
+    html body .nouriva-register-page .nouriva-register-controls {
+        position: absolute !important;
+
+        top: 30px !important;
+        right: 18px !important;
+        left: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        z-index: 9999 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+
+        transform: none !important;
+    }
+
 }
