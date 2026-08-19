@@ -3784,7 +3784,7 @@ body {
 
     object-fit: cover;
 
-    object-position: center;
+    object-position: right center;
 }
 
 
@@ -5480,6 +5480,23 @@ body {
 
 .h2-dashboard-preview:hover {
     transform: perspective(1200px) rotateX(0deg) translateY(-5px);
+}
+
+.h2-dashboard-preview--image {
+    aspect-ratio: 3 / 2;
+    line-height: 0;
+}
+
+.h2-dashboard-preview--image > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.h2-dashboard-preview--image > :not(img) {
+    display: none;
 }
 
 
@@ -9037,8 +9054,6 @@ body {
     font-size: 14px;
 
     font-weight: 800;
-
-    transition: var(--transition);
 }
 
 
@@ -9048,19 +9063,10 @@ body {
     border-color: var(--white);
 
     color: var(--primary-color);
-
-    transform: translateY(-3px);
 }
 
 
-.about-final-cta-primary i {
-    transition: var(--transition);
-}
-
-
-.about-final-cta-primary:hover i {
-    transform: translateX(5px);
-}
+.about-final-cta-primary i {}
 
 
 .about-final-cta-secondary {
@@ -9073,8 +9079,6 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 
     padding-bottom: 5px;
-
-    transition: var(--transition);
 }
 
 
@@ -9093,12 +9097,12 @@ body {
     position: absolute;
 
     right: 75px;
-    top: 50%;
+    top: 40%;
 
     width: 390px;
     height: 390px;
 
-    transform: translateY(-50%);
+    transform: translateY(-40%);
 
     z-index: 2;
 }
@@ -9151,13 +9155,7 @@ body {
     display: block;
 
     object-fit: cover;
-
-    transition: transform 0.7s ease;
-}
-
-
-.about-final-cta-inner:hover .about-final-cta-image img {
-    transform: scale(1.06);
+    object-position: center 28%;
 }
 
 
@@ -10304,6 +10302,47 @@ body {
     font-size: 15px;
 
     line-height: 1.6;
+}
+
+
+.weekly-menu-meal {
+    display: flow-root;
+}
+
+
+.weekly-menu-meal-thumb {
+    float: left;
+
+    width: 72px;
+    height: 72px;
+
+    margin: 4px 14px 10px 0;
+
+    border: 1px solid rgba(132, 102, 60, 0.10);
+
+    border-radius: 16px;
+
+    object-fit: cover;
+
+    background-color: var(--bg-color);
+
+    box-shadow: 0 10px 24px rgba(74, 56, 36, 0.08);
+}
+
+
+html[dir="rtl"] .weekly-menu-meal-thumb {
+    float: right;
+
+    margin: 4px 0 10px 14px;
+}
+
+
+html[data-theme="dark"] .weekly-menu-meal-thumb {
+    border-color: rgba(255, 255, 255, 0.08);
+
+    background-color: #1c201a;
+
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -19924,6 +19963,13 @@ body {
         font-size: 14px;
     }
 
+    .weekly-menu-meal-thumb {
+        width: 64px;
+        height: 64px;
+        margin: 3px 12px 8px 0;
+        border-radius: 14px;
+    }
+
     .weekly-menu-footer {
         padding: 18px 22px;
     }
@@ -20292,6 +20338,13 @@ body {
 
     .weekly-menu-meal p {
         font-size: 13px;
+    }
+
+    .weekly-menu-meal-thumb {
+        width: 56px;
+        height: 56px;
+        margin: 2px 10px 7px 0;
+        border-radius: 13px;
     }
 
     .weekly-menu-diet {
@@ -20805,6 +20858,13 @@ body {
     .weekly-menu-meal p {
         font-size: 12px;
         line-height: 1.55;
+    }
+
+    .weekly-menu-meal-thumb {
+        width: 50px;
+        height: 50px;
+        margin: 2px 8px 6px 0;
+        border-radius: 12px;
     }
 
     .weekly-menu-diet {
@@ -27960,6 +28020,732 @@ html[dir="rtl"] .nouriva-h2-collections .h2-collection-card:hover .h2-collection
         gap: 8px !important;
 
         transform: none !important;
+    }
+
+}
+
+/* =========================================================
+   NOURIVA MOTION SYSTEM
+========================================================= */
+
+html.reveal-ready .reveal {
+    opacity: 0;
+    transform:
+        translate3d(var(--reveal-x, 0),
+            var(--reveal-y, 24px),
+            0) scale(var(--reveal-scale, 1));
+    transition:
+        opacity 950ms ease-out,
+        transform 950ms ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+html.reveal-ready .reveal.reveal-up {
+    --reveal-x: 0px;
+    --reveal-y: 24px;
+    --reveal-scale: 1;
+}
+
+html.reveal-ready .reveal.reveal-left {
+    --reveal-x: -24px;
+    --reveal-y: 0px;
+    --reveal-scale: 1;
+}
+
+html[dir="rtl"].reveal-ready .reveal.reveal-left {
+    --reveal-x: 24px;
+}
+
+html.reveal-ready .reveal.reveal-right {
+    --reveal-x: 24px;
+    --reveal-y: 0px;
+    --reveal-scale: 1;
+}
+
+html[dir="rtl"].reveal-ready .reveal.reveal-right {
+    --reveal-x: -24px;
+}
+
+html.reveal-ready .reveal.reveal-scale {
+    --reveal-x: 0px;
+    --reveal-y: 0px;
+    --reveal-scale: 0.985;
+}
+
+html.reveal-ready .reveal.is-visible {
+    opacity: 1;
+    transform:
+        translate3d(0px, 0px, 0) scale(1);
+}
+
+html.reveal-ready .stagger-item {
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.reveal-ready .counter {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html.reveal-ready .reveal,
+    html.reveal-ready .reveal.is-visible,
+    html.reveal-ready .stagger-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    html.reveal-ready .counter {
+        transition: none !important;
+    }
+}
+
+/* =========================================================
+   STRONG OVERRIDE - HOME 2 FINAL CTA FOOD VISUAL
+   Keep food image vertically centered
+========================================================= */
+
+.nouriva-h2-final .h2-final-panel {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.nouriva-h2-final .h2-final-visual {
+    position: absolute !important;
+
+    top: 50% !important;
+    right: 65px !important;
+
+    width: 430px !important;
+    height: 430px !important;
+
+    margin: 0 !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 5 !important;
+}
+
+.nouriva-h2-final .h2-final-food {
+    position: absolute !important;
+
+    inset: 42px !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+}
+
+/* Desktop / tablet */
+@media (min-width: 992px) {
+
+    .nouriva-h2-final .h2-final-visual {
+        top: 50% !important;
+        right: 65px !important;
+        transform: translateY(-50%) !important;
+    }
+}
+
+/* =========================================================
+   STRONG OVERRIDE
+   HOME 2 FINAL CTA
+   iPAD MINI + iPAD PRO
+   768px - 1199px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    /* CTA section */
+    .nouriva-h2-final {
+        width: 100% !important;
+        padding: 55px 25px !important;
+        overflow: hidden !important;
+    }
+
+    /* Main panel */
+    .nouriva-h2-final .h2-final-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        min-height: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        padding: 55px 45px 60px !important;
+
+        overflow: hidden !important;
+    }
+
+    /* =====================================================
+       TEXT CONTENT
+    ===================================================== */
+
+    .nouriva-h2-final .h2-final-copy {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 680px !important;
+
+        margin: 0 auto !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+
+        z-index: 10 !important;
+    }
+
+    .nouriva-h2-final .h2-final-label {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy h2 {
+        width: 100% !important;
+        max-width: 620px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        font-size: 42px !important;
+        line-height: 1.1 !important;
+
+        text-align: center !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy p {
+        width: 100% !important;
+        max-width: 560px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+
+        text-align: center !important;
+    }
+
+    /* Buttons */
+    .nouriva-h2-final .h2-final-actions {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 18px !important;
+
+        margin-top: 25px !important;
+    }
+
+
+    /* =====================================================
+       FOOD VISUAL
+       REMOVE ABSOLUTE POSITION
+    ===================================================== */
+
+    .nouriva-h2-final .h2-final-visual {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: 340px !important;
+        height: 340px !important;
+
+        margin: 45px auto 0 !important;
+
+        flex-shrink: 0 !important;
+
+        z-index: 4 !important;
+    }
+
+
+    /* Food image */
+    .nouriva-h2-final .h2-final-food {
+        position: absolute !important;
+
+        inset: 35px !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+    }
+
+    .nouriva-h2-final .h2-final-food img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* Outer ring */
+    .nouriva-h2-final .h2-final-image-ring {
+        position: absolute !important;
+        inset: 0 !important;
+    }
+
+
+    /* Floating tag */
+    .nouriva-h2-final .h2-final-floating-tag {
+        left: 0 !important;
+        bottom: 25px !important;
+
+        z-index: 8 !important;
+    }
+
+
+    /* Bottom brand line */
+    .nouriva-h2-final .h2-final-bottom {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+
+        margin-top: 40px !important;
+
+        justify-content: center !important;
+
+        flex-wrap: wrap !important;
+
+        text-align: center !important;
+
+        z-index: 10 !important;
+    }
+}
+
+
+/* =========================================================
+   iPAD MINI
+   768px - 991px
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .nouriva-h2-final .h2-final-panel {
+        padding: 45px 35px 55px !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy h2 {
+        font-size: 38px !important;
+    }
+
+    .nouriva-h2-final .h2-final-visual {
+        width: 320px !important;
+        height: 320px !important;
+
+        margin-top: 40px !important;
+    }
+
+    .nouriva-h2-final .h2-final-food {
+        inset: 32px !important;
+    }
+}
+
+
+/* =========================================================
+   iPAD PRO
+   992px - 1199px
+========================================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .nouriva-h2-final .h2-final-panel {
+        padding: 60px 55px 65px !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy {
+        max-width: 720px !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy h2 {
+        font-size: 46px !important;
+    }
+
+    .nouriva-h2-final .h2-final-visual {
+        width: 380px !important;
+        height: 380px !important;
+
+        margin-top: 50px !important;
+    }
+
+    .nouriva-h2-final .h2-final-food {
+        inset: 38px !important;
+    }
+}
+
+/* =========================================================
+   HOME 2 CTA - MOBILE FINAL OVERRIDE
+   Prevent image/text overlap completely
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Main CTA */
+    .nouriva-h2-final {
+        width: 100% !important;
+        padding: 20px 12px !important;
+        overflow: hidden !important;
+    }
+
+    .nouriva-h2-final .h2-final-panel {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        padding: 45px 22px 40px !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* =========================
+       TEXT - KEEP ABOVE IMAGE
+    ========================= */
+
+    .nouriva-h2-final .h2-final-copy {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        text-align: center !important;
+
+        z-index: 20 !important;
+    }
+
+    .nouriva-h2-final .h2-final-label {
+        position: relative !important;
+        display: block !important;
+
+        margin-bottom: 16px !important;
+
+        text-align: center !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy h2 {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 300px !important;
+
+        margin: 0 auto 18px !important;
+
+        font-size: 32px !important;
+        line-height: 1.08 !important;
+
+        text-align: center !important;
+
+        z-index: 21 !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy p {
+        position: relative !important;
+
+        width: 100% !important;
+        max-width: 300px !important;
+
+        margin: 0 auto !important;
+
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+
+        text-align: center !important;
+
+        z-index: 21 !important;
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .nouriva-h2-final .h2-final-actions {
+        position: relative !important;
+
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 14px !important;
+
+        margin: 25px 0 0 !important;
+
+        z-index: 30 !important;
+    }
+
+    .nouriva-h2-final .h2-final-actions>* {
+        position: relative !important;
+        z-index: 31 !important;
+    }
+
+
+    /* =========================
+       IMAGE - COMPLETELY BELOW
+       TEXT + BUTTONS
+    ========================= */
+
+    .nouriva-h2-final .h2-final-visual {
+        position: relative !important;
+
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        width: 245px !important;
+        height: 245px !important;
+
+        margin: 45px auto 0 !important;
+
+        flex: 0 0 245px !important;
+
+        display: block !important;
+
+        z-index: 5 !important;
+
+        order: 3 !important;
+    }
+
+
+    /* Circular ring */
+    .nouriva-h2-final .h2-final-image-ring {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        z-index: 1 !important;
+    }
+
+
+    /* Food image */
+    .nouriva-h2-final .h2-final-food {
+        position: absolute !important;
+
+        top: 25px !important;
+        right: 25px !important;
+        bottom: 25px !important;
+        left: 25px !important;
+
+        width: auto !important;
+        height: auto !important;
+
+        margin: 0 !important;
+
+        z-index: 2 !important;
+    }
+
+    .nouriva-h2-final .h2-final-food img {
+        display: block !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+    }
+
+
+    /* Floating tag - don't let it overlap text */
+    .nouriva-h2-final .h2-final-floating-tag {
+        position: absolute !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        bottom: 5px !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 10 !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    /* =========================
+       BOTTOM FEATURES
+    ========================= */
+
+    .nouriva-h2-final .h2-final-bottom {
+        position: relative !important;
+
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        width: 100% !important;
+
+        margin: 35px 0 0 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        flex-wrap: wrap !important;
+
+        text-align: center !important;
+
+        z-index: 20 !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   320px - 400px
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .nouriva-h2-final {
+        padding: 15px 10px !important;
+    }
+
+    .nouriva-h2-final .h2-final-panel {
+        padding: 40px 18px 35px !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy h2 {
+        max-width: 275px !important;
+        font-size: 29px !important;
+        line-height: 1.08 !important;
+    }
+
+    .nouriva-h2-final .h2-final-copy p {
+        max-width: 275px !important;
+        font-size: 13px !important;
+    }
+
+    .nouriva-h2-final .h2-final-visual {
+        width: 220px !important;
+        height: 220px !important;
+
+        flex-basis: 220px !important;
+
+        margin-top: 40px !important;
+    }
+
+    .nouriva-h2-final .h2-final-food {
+        top: 22px !important;
+        right: 22px !important;
+        bottom: 22px !important;
+        left: 22px !important;
+    }
+}
+
+/* =========================================================
+   HOME 2 - KITCHEN TO DIFFERENCE GAP FIX
+========================================================= */
+
+.nouriva-kitchen-journey {
+    padding-bottom: 70px !important;
+}
+
+.nouriva-h2-difference {
+    padding-top: 35px !important;
+}
+
+
+/* Keep the note closer to the next section */
+.kitchen-journey-note {
+    margin-bottom: 0 !important;
+}
+
+
+/* Tablet / iPad */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    .nouriva-kitchen-journey {
+        padding-bottom: 40px !important;
+    }
+
+    .nouriva-h2-difference {
+        padding-top: 40px !important;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .nouriva-kitchen-journey {
+        padding-bottom: 30px !important;
+    }
+
+    .nouriva-h2-difference {
+        padding-top: 30px !important;
+    }
+
+    .kitchen-journey-note {
+        margin-top: 35px !important;
+        margin-bottom: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   STRONG OVERRIDE
+   iPAD MINI - TESTIMONIAL CARDS
+   ALL CARDS SAME CENTER WIDTH
+========================================================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .nouriva-testimonials-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .nouriva-testimonial-card,
+    .nouriva-testimonial-card.featured {
+        width: 100% !important;
+        max-width: 550px !important;
+        min-width: 550px !important;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        min-height: 370px !important;
+        height: auto !important;
+
+        box-sizing: border-box !important;
     }
 
 }

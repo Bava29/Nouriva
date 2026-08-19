@@ -18035,3 +18035,85 @@ html[data-dashboard-theme="dark"] .meal-plan-explorer-heading::after {
         font-size: 6.5px !important;
     }
 }
+
+/* =========================================================
+   NOURIVA MOTION SYSTEM
+========================================================= */
+
+html.reveal-ready .reveal {
+    opacity: 0;
+    transform:
+        translate3d(
+            var(--reveal-x, 0),
+            var(--reveal-y, 24px),
+            0
+        )
+        scale(var(--reveal-scale, 1));
+    transition:
+        opacity 950ms ease-out,
+        transform 950ms ease-out;
+    transition-delay: var(--reveal-delay, 0ms);
+    will-change: opacity, transform;
+}
+
+html.reveal-ready .reveal.reveal-up {
+    --reveal-x: 0px;
+    --reveal-y: 24px;
+    --reveal-scale: 1;
+}
+
+html.reveal-ready .reveal.reveal-left {
+    --reveal-x: -24px;
+    --reveal-y: 0px;
+    --reveal-scale: 1;
+}
+
+html[dir="rtl"].reveal-ready .reveal.reveal-left {
+    --reveal-x: 24px;
+}
+
+html.reveal-ready .reveal.reveal-right {
+    --reveal-x: 24px;
+    --reveal-y: 0px;
+    --reveal-scale: 1;
+}
+
+html[dir="rtl"].reveal-ready .reveal.reveal-right {
+    --reveal-x: -24px;
+}
+
+html.reveal-ready .reveal.reveal-scale {
+    --reveal-x: 0px;
+    --reveal-y: 0px;
+    --reveal-scale: 0.985;
+}
+
+html.reveal-ready .reveal.is-visible {
+    opacity: 1;
+    transform:
+        translate3d(0px, 0px, 0)
+        scale(1);
+}
+
+html.reveal-ready .stagger-item {
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.reveal-ready .counter {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.reveal-ready .reveal,
+    html.reveal-ready .reveal.is-visible,
+    html.reveal-ready .stagger-item {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    html.reveal-ready .counter {
+        transition: none !important;
+    }
+}
