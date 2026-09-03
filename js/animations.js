@@ -374,7 +374,7 @@
     function animateCount(element, finalText, values, render) {
         if (!element) return;
 
-        const duration = 1700;
+        const duration = 1200;
         const startTime = performance.now();
 
         function step(now) {
@@ -416,7 +416,7 @@
         children.forEach(function (child, index) {
             if (child.matches("script, style")) return;
 
-            const delay = Math.min(index * 110, 550);
+            const delay = Math.min(index * 70, 350);
 
             if (
                 variant === "left" ||
@@ -484,7 +484,7 @@
                     ? "scale"
                     : "up";
 
-            const delay = Math.min(index * 110, 550);
+            const delay = Math.min(index * 70, 350);
 
             safeObserveReveal(child);
 
@@ -601,7 +601,7 @@
             element.classList.add("stagger-item");
             element.style.setProperty(
                 "--reveal-delay",
-                `${Math.min(index * 90, 420)}ms`
+                `${Math.min(index * 60, 280)}ms`
             );
         });
     }
@@ -718,8 +718,13 @@
     }
 
     function init() {
-        registerRevealSystem();
-        registerStaticRevealHelpers();
+        var isDashboard = !!document.querySelector(".nouriva-dashboard-layout");
+
+        if (!isDashboard) {
+            registerRevealSystem();
+            registerStaticRevealHelpers();
+        }
+
         registerCounters();
 
         if (!supportsIntersectionObserver) {
