@@ -8632,11 +8632,19 @@ body {
 
     display: grid;
 
-    grid-template-columns: 1fr 0.65fr;
+    grid-template-columns: 1fr;
 
-    align-items: end;
+    justify-items: center;
 
-    gap: 80px;
+    gap: 18px;
+
+    text-align: center;
+}
+
+
+.nouriva-team-heading>div {
+    width: 100%;
+    max-width: 650px;
 }
 
 
@@ -8656,7 +8664,7 @@ body {
 
 
 .nouriva-team-heading h2 {
-    max-width: 650px;
+    max-width: none;
 
     margin: 0;
 
@@ -8674,7 +8682,7 @@ body {
 
 
 .nouriva-team-heading>p {
-    max-width: 470px;
+    max-width: 650px;
 
     margin: 0;
 
@@ -9523,11 +9531,19 @@ body {
 
     display: grid;
 
-    grid-template-columns: 1fr 0.6fr;
+    grid-template-columns: 1fr;
 
-    align-items: end;
+    justify-items: center;
 
-    gap: 70px;
+    gap: 18px;
+
+    text-align: center;
+}
+
+
+.weekly-plans-header>div {
+    width: 100%;
+    max-width: 700px;
 }
 
 
@@ -9547,7 +9563,7 @@ body {
 
 
 .weekly-plans-header h2 {
-    max-width: 700px;
+    max-width: none;
 
     margin: 0;
 
@@ -9565,7 +9581,7 @@ body {
 
 
 .weekly-plans-header>p {
-    max-width: 470px;
+    max-width: 650px;
 
     margin: 0;
 
@@ -9656,8 +9672,8 @@ body {
 .weekly-plan-featured-badge {
     position: absolute;
 
-    top: 0;
-    left: 50%;
+    top: -10px;
+    left: 38%;
 
     transform: translate(-50%, -50%);
 
@@ -19581,7 +19597,6 @@ html[data-theme="dark"] .weekly-menu-meal-thumb {
 
     .weekly-plans-header {
         max-width: 960px;
-        grid-template-columns: 1fr 0.65fr;
         gap: 45px;
     }
 
